@@ -1,0 +1,487 @@
+<?xml version="1.0" encoding="UTF-8"?><html xmlns:test="http://www.jenitennison.com/xslt/unit-test" xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+      <title>Test Report for home/dario/git/wienerdiarium/data/refactor/tok2.xsl (passed: 42 / pending: 0 / failed: 0 / total: 42)</title>
+      <link rel="stylesheet" type="text/css" href="file:/home/dario/.p2/pool/plugins/com.oxygenxml.editor_20.1.0.v2018122403/frameworks/xspec/src/reporter/test-report.css" />
+   </head>
+   <body>
+      <h1>Test Report</h1>
+      <p>Stylesheet: <a href="file:/home/dario/git/wienerdiarium/data/refactor/tok2.xsl">home/dario/git/wienerdiarium/data/refactor/tok2.xsl</a></p>
+      <p>Tested: 24 January 2019 at 10:03</p>
+      <h2>Contents</h2>
+      <table class="xspec">
+         <col width="75%" />
+         <col width="6.25%" />
+         <col width="6.25%" />
+         <col width="6.25%" />
+         <col width="6.25%" />
+         <thead>
+            <tr>
+               <th></th>
+               <th class="totals">passed: 42</th>
+               <th class="totals">pending: 0</th>
+               <th class="totals">failed: 0</th>
+               <th class="totals">total: 42</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr class="successful">
+               <th><a href="#d3e4">T1: Umbrüche einfach</a></th>
+               <th class="totals">5</th>
+               <th class="totals">0</th>
+               <th class="totals">0</th>
+               <th class="totals">5</th>
+            </tr>
+            <tr class="successful">
+               <th><a href="#d3e685">T2: ohne hi, mit anderen Elementen</a></th>
+               <th class="totals">4</th>
+               <th class="totals">0</th>
+               <th class="totals">0</th>
+               <th class="totals">4</th>
+            </tr>
+            <tr class="successful">
+               <th><a href="#d3e1136">T3: mit hi</a></th>
+               <th class="totals">16</th>
+               <th class="totals">0</th>
+               <th class="totals">0</th>
+               <th class="totals">16</th>
+            </tr>
+            <tr class="successful">
+               <th><a href="#d3e5246">T4: w mit unclear</a></th>
+               <th class="totals">13</th>
+               <th class="totals">0</th>
+               <th class="totals">0</th>
+               <th class="totals">13</th>
+            </tr>
+            <tr class="successful">
+               <th><a href="#d3e14525">T5: Normal</a></th>
+               <th class="totals">2</th>
+               <th class="totals">0</th>
+               <th class="totals">0</th>
+               <th class="totals">2</th>
+            </tr>
+            <tr class="successful">
+               <th><a href="#d3e15164">T6: Umbrüche mit Hindernissen</a></th>
+               <th class="totals">2</th>
+               <th class="totals">0</th>
+               <th class="totals">0</th>
+               <th class="totals">2</th>
+            </tr>
+         </tbody>
+      </table>
+      <div id="d3e4">
+         <h2 class="successful">T1: Umbrüche einfach<span class="scenario-totals">passed: 5 / pending: 0 / failed: 0 / total: 5</span></h2>
+         <table class="xspec" id="t-d3e4">
+            <col width="75%" />
+            <col width="25%" />
+            <tbody>
+               <tr class="successful">
+                  <th>T1: Umbrüche einfach</th>
+                  <th>passed: 5 / pending: 0 / failed: 0 / total: 5</th>
+               </tr>
+               <tr class="successful">
+                  <th>T1.1</th>
+                  <th>passed: 1 / pending: 0 / failed: 0 / total: 1</th>
+               </tr>
+               <tr class="successful">
+                  <td>Umbruch</td>
+                  <td>Success</td>
+               </tr>
+               <tr class="successful">
+                  <th>1780-12-02: falsches Trennzeichen vorher</th>
+                  <th>passed: 1 / pending: 0 / failed: 0 / total: 1</th>
+               </tr>
+               <tr class="successful">
+                  <td>kompletter Text, unverändert übernommen</td>
+                  <td>Success</td>
+               </tr>
+               <tr class="successful">
+                  <th>1780-12-02, S. 10</th>
+                  <th>passed: 1 / pending: 0 / failed: 0 / total: 1</th>
+               </tr>
+               <tr class="successful">
+                  <td>2 Umbrüche</td>
+                  <td>Success</td>
+               </tr>
+               <tr class="successful">
+                  <th>T1.4: 1780-12-06; einfache Trennung, nächstes Wort beginnt mit ü</th>
+                  <th>passed: 1 / pending: 0 / failed: 0 / total: 1</th>
+               </tr>
+               <tr class="successful">
+                  <td>einfacher Umbruch ohne Doppelung</td>
+                  <td>Success</td>
+               </tr>
+               <tr class="successful">
+                  <th>T1.5: 1780-12-06, Auslassung am Zeilenende</th>
+                  <th>passed: 1 / pending: 0 / failed: 0 / total: 1</th>
+               </tr>
+               <tr class="successful">
+                  <td>unverändert</td>
+                  <td>Success</td>
+               </tr>
+            </tbody>
+         </table>
+      </div>
+      <div id="d3e685">
+         <h2 class="successful">T2: ohne hi, mit anderen Elementen<span class="scenario-totals">passed: 4 / pending: 0 / failed: 0 / total: 4</span></h2>
+         <table class="xspec" id="t-d3e685">
+            <col width="75%" />
+            <col width="25%" />
+            <tbody>
+               <tr class="successful">
+                  <th>T2: ohne hi, mit anderen Elementen</th>
+                  <th>passed: 4 / pending: 0 / failed: 0 / total: 4</th>
+               </tr>
+               <tr class="successful">
+                  <th>T2.1: direkt danach nur gap</th>
+                  <th>passed: 1 / pending: 0 / failed: 0 / total: 1</th>
+               </tr>
+               <tr class="successful">
+                  <td>identisch</td>
+                  <td>Success</td>
+               </tr>
+               <tr class="successful">
+                  <th>T2.2: danach nur unclear</th>
+                  <th>passed: 1 / pending: 0 / failed: 0 / total: 1</th>
+               </tr>
+               <tr class="successful">
+                  <td>Kee-ne</td>
+                  <td>Success</td>
+               </tr>
+               <tr class="successful">
+                  <th>T2.3: mit unclear am Anfang</th>
+                  <th>passed: 1 / pending: 0 / failed: 0 / total: 1</th>
+               </tr>
+               <tr class="successful">
+                  <td>Umbruch im Wort mit unclear drin</td>
+                  <td>Success</td>
+               </tr>
+               <tr class="successful">
+                  <th>T2.4: unclear vor Trennung</th>
+                  <th>passed: 1 / pending: 0 / failed: 0 / total: 1</th>
+               </tr>
+               <tr class="successful">
+                  <td>Umbruch</td>
+                  <td>Success</td>
+               </tr>
+            </tbody>
+         </table>
+      </div>
+      <div id="d3e1136">
+         <h2 class="successful">T3: mit hi<span class="scenario-totals">passed: 16 / pending: 0 / failed: 0 / total: 16</span></h2>
+         <table class="xspec" id="t-d3e1136">
+            <col width="75%" />
+            <col width="25%" />
+            <tbody>
+               <tr class="successful">
+                  <th>T3: mit hi</th>
+                  <th>passed: 16 / pending: 0 / failed: 0 / total: 16</th>
+               </tr>
+               <tr class="successful">
+                  <th>(hi)(w)(pc)(/hi) (lb)(hi)(w)(/hi)</th>
+                  <th>passed: 1 / pending: 0 / failed: 0 / total: 1</th>
+               </tr>
+               <tr class="successful">
+                  <td>Umbruch</td>
+                  <td>Success</td>
+               </tr>
+               <tr class="successful">
+                  <th>(hi)(w)(pc)(/hi) (lb)(w)</th>
+                  <th>passed: 1 / pending: 0 / failed: 0 / total: 1</th>
+               </tr>
+               <tr class="successful">
+                  <td>Umbruch</td>
+                  <td>Success</td>
+               </tr>
+               <tr class="successful">
+                  <th>(w)(pc) (lb)(unclear)(w)(/unclear)</th>
+                  <th>passed: 1 / pending: 0 / failed: 0 / total: 1</th>
+               </tr>
+               <tr class="successful">
+                  <td>Umbruch</td>
+                  <td>Success</td>
+               </tr>
+               <tr class="successful">
+                  <th>(w)(pc) (lb)(unclear)(w)</th>
+                  <th>passed: 1 / pending: 0 / failed: 0 / total: 1</th>
+               </tr>
+               <tr class="successful">
+                  <td>Umbruch</td>
+                  <td>Success</td>
+               </tr>
+               <tr class="successful">
+                  <th>T3.5: (hi)(w)(pc)(lb)(w) (w)+(/hi)</th>
+                  <th>passed: 1 / pending: 0 / failed: 0 / total: 1</th>
+               </tr>
+               <tr class="successful">
+                  <td>Umbruch</td>
+                  <td>Success</td>
+               </tr>
+               <tr class="successful">
+                  <th>T3.6: (hi)(pc) (lb)(w)</th>
+                  <th>passed: 1 / pending: 0 / failed: 0 / total: 1</th>
+               </tr>
+               <tr class="successful">
+                  <td>(w)(hi).(pc)(/hi)(lb)(w)(/w)</td>
+                  <td>Success</td>
+               </tr>
+               <tr class="successful">
+                  <th>T3.7: (w)(pc) (lb)(hi)...</th>
+                  <th>passed: 1 / pending: 0 / failed: 0 / total: 1</th>
+               </tr>
+               <tr class="successful">
+                  <td>Kopie</td>
+                  <td>Success</td>
+               </tr>
+               <tr class="successful">
+                  <th>T3.8: (hi)(w)+ (w)(pc)(/hi) (lb)(hi)(w)(/hi)</th>
+                  <th>passed: 1 / pending: 0 / failed: 0 / total: 1</th>
+               </tr>
+               <tr class="successful">
+                  <td>(hi)(w)+ (w).(pc)(lb)(/hi) (w)?(/hi)</td>
+                  <td>Success</td>
+               </tr>
+               <tr class="successful">
+                  <th>hi über mehrere Zeilen</th>
+                  <th>passed: 1 / pending: 0 / failed: 0 / total: 1</th>
+               </tr>
+               <tr class="successful">
+                  <td>langes hi mit Umbrüchen</td>
+                  <td>Success</td>
+               </tr>
+               <tr class="successful">
+                  <th>T3.10: (hi)(w, pc)+-(/hi)(lb)(w)A-Z(/w)</th>
+                  <th>passed: 1 / pending: 0 / failed: 0 / total: 1</th>
+               </tr>
+               <tr class="successful">
+                  <td>hi, lb übernommen</td>
+                  <td>Success</td>
+               </tr>
+               <tr class="successful">
+                  <th>T3.11: 1732-05-24 (hi)(w+)-(/hi) (lb)(w) ...</th>
+                  <th>passed: 1 / pending: 0 / failed: 0 / total: 1</th>
+               </tr>
+               <tr class="successful">
+                  <td>_Trabisonda relegi-_|ret ...</td>
+                  <td>Success</td>
+               </tr>
+               <tr class="successful">
+                  <th>T3.12: hi mit pc und normal, Umbruch aber erst danach</th>
+                  <th>passed: 1 / pending: 0 / failed: 0 / total: 1</th>
+               </tr>
+               <tr class="successful">
+                  <td>Pontifical-Kleider|aus</td>
+                  <td>Success</td>
+               </tr>
+               <tr class="successful">
+                  <th>T3.13: hi pc lb hi w</th>
+                  <th>passed: 1 / pending: 0 / failed: 0 / total: 1</th>
+               </tr>
+               <tr class="successful">
+                  <td>vollständiges Wort</td>
+                  <td>Success</td>
+               </tr>
+               <tr class="successful">
+                  <th>T3.14: hi pc lb w groß</th>
+                  <th>passed: 1 / pending: 0 / failed: 0 / total: 1</th>
+               </tr>
+               <tr class="successful">
+                  <td></td>
+                  <td>Success</td>
+               </tr>
+               <tr class="successful">
+                  <th>T3.15: hi pc lb pc</th>
+                  <th>passed: 1 / pending: 0 / failed: 0 / total: 1</th>
+               </tr>
+               <tr class="successful">
+                  <td>voller Text</td>
+                  <td>Success</td>
+               </tr>
+               <tr class="successful">
+                  <th>T3.16: (hi pc lb /hi) lb w</th>
+                  <th>passed: 1 / pending: 0 / failed: 0 / total: 1</th>
+               </tr>
+               <tr class="successful">
+                  <td>alda</td>
+                  <td>Success</td>
+               </tr>
+            </tbody>
+         </table>
+      </div>
+      <div id="d3e5246">
+         <h2 class="successful">T4: w mit unclear<span class="scenario-totals">passed: 13 / pending: 0 / failed: 0 / total: 13</span></h2>
+         <table class="xspec" id="t-d3e5246">
+            <col width="75%" />
+            <col width="25%" />
+            <tbody>
+               <tr class="successful">
+                  <th>T4: w mit unclear</th>
+                  <th>passed: 13 / pending: 0 / failed: 0 / total: 13</th>
+               </tr>
+               <tr class="successful">
+                  <th>T4.1: w mit unclear und Trennung</th>
+                  <th>passed: 1 / pending: 0 / failed: 0 / total: 1</th>
+               </tr>
+               <tr class="successful">
+                  <td>w mit unclear und Trennung drin</td>
+                  <td>Success</td>
+               </tr>
+               <tr class="successful">
+                  <th>T4.2: (w (unclear) /w)</th>
+                  <th>passed: 1 / pending: 0 / failed: 0 / total: 1</th>
+               </tr>
+               <tr class="successful">
+                  <td>unverändert</td>
+                  <td>Success</td>
+               </tr>
+               <tr class="successful">
+                  <th>T4.3: mit Text nach unclear und umbruch direkt danach</th>
+                  <th>passed: 1 / pending: 0 / failed: 0 / total: 1</th>
+               </tr>
+               <tr class="successful">
+                  <td>toller Umbruch</td>
+                  <td>Success</td>
+               </tr>
+               <tr class="successful">
+                  <th>1732-02-13 unclear mit Erweiterungen direkt vor Umbruch</th>
+                  <th>passed: 1 / pending: 0 / failed: 0 / total: 1</th>
+               </tr>
+               <tr class="successful">
+                  <td>fort-gesetzet</td>
+                  <td>Success</td>
+               </tr>
+               <tr class="successful">
+                  <th>T4.5: 1732-02-13 hi mit Erweiterung in der Nähen vom Umbruch</th>
+                  <th>passed: 1 / pending: 0 / failed: 0 / total: 1</th>
+               </tr>
+               <tr class="successful">
+                  <td>Oval-rund / der | Boden</td>
+                  <td>Success</td>
+               </tr>
+               <tr class="successful">
+                  <th>T4.6: 1780-12-02 p mit mehreren w-lb-unclear</th>
+                  <th>passed: 1 / pending: 0 / failed: 0 / total: 1</th>
+               </tr>
+               <tr class="successful">
+                  <td>geordnete w ohne Chaos</td>
+                  <td>Success</td>
+               </tr>
+               <tr class="successful">
+                  <th>T4.7: 1780-12-02: unclear mit mehreren w nach Trennung</th>
+                  <th>passed: 1 / pending: 0 / failed: 0 / total: 1</th>
+               </tr>
+               <tr class="successful">
+                  <td>erstes unclear zur Trennung, Rest zusammen</td>
+                  <td>Success</td>
+               </tr>
+               <tr class="successful">
+                  <th>1780-12-02: unclear nach Trennung und vor pc</th>
+                  <th>passed: 1 / pending: 0 / failed: 0 / total: 1</th>
+               </tr>
+               <tr class="successful">
+                  <td>mit Umbruch und Satzzeichen</td>
+                  <td>Success</td>
+               </tr>
+               <tr class="successful">
+                  <th>T4.9: auch pc unclear</th>
+                  <th>passed: 1 / pending: 0 / failed: 0 / total: 1</th>
+               </tr>
+               <tr class="successful">
+                  <td>unclear im w mit Umbruch</td>
+                  <td>Success</td>
+               </tr>
+               <tr class="successful">
+                  <th>pc nach dem lb und ein pc</th>
+                  <th>passed: 1 / pending: 0 / failed: 0 / total: 1</th>
+               </tr>
+               <tr class="successful">
+                  <td>Umbruch mit pc danach</td>
+                  <td>Success</td>
+               </tr>
+               <tr class="successful">
+                  <th>T4.10: unclear mit Trennung vor Umbruch</th>
+                  <th>passed: 1 / pending: 0 / failed: 0 / total: 1</th>
+               </tr>
+               <tr class="successful">
+                  <td>Umbrüche, teils mit unclear vornan</td>
+                  <td>Success</td>
+               </tr>
+               <tr class="successful">
+                  <th>T4.11: unclear mit mehreren w und Trennung</th>
+                  <th>passed: 1 / pending: 0 / failed: 0 / total: 1</th>
+               </tr>
+               <tr class="successful">
+                  <td>Ordnung</td>
+                  <td>Success</td>
+               </tr>
+               <tr class="successful">
+                  <th>T4.12</th>
+                  <th>passed: 1 / pending: 0 / failed: 0 / total: 1</th>
+               </tr>
+               <tr class="successful">
+                  <td>.</td>
+                  <td>Success</td>
+               </tr>
+            </tbody>
+         </table>
+      </div>
+      <div id="d3e14525">
+         <h2 class="successful">T5: Normal<span class="scenario-totals">passed: 2 / pending: 0 / failed: 0 / total: 2</span></h2>
+         <table class="xspec" id="t-d3e14525">
+            <col width="75%" />
+            <col width="25%" />
+            <tbody>
+               <tr class="successful">
+                  <th>T5: Normal</th>
+                  <th>passed: 2 / pending: 0 / failed: 0 / total: 2</th>
+               </tr>
+               <tr class="successful">
+                  <th>T5.1: Normalfall</th>
+                  <th>passed: 1 / pending: 0 / failed: 0 / total: 1</th>
+               </tr>
+               <tr class="successful">
+                  <td>identisch</td>
+                  <td>Success</td>
+               </tr>
+               <tr class="successful">
+                  <th>T5.2</th>
+                  <th>passed: 1 / pending: 0 / failed: 0 / total: 1</th>
+               </tr>
+               <tr class="successful">
+                  <td>4 Zeilen</td>
+                  <td>Success</td>
+               </tr>
+            </tbody>
+         </table>
+      </div>
+      <div id="d3e15164">
+         <h2 class="successful">T6: Umbrüche mit Hindernissen<span class="scenario-totals">passed: 2 / pending: 0 / failed: 0 / total: 2</span></h2>
+         <table class="xspec" id="t-d3e15164">
+            <col width="75%" />
+            <col width="25%" />
+            <tbody>
+               <tr class="successful">
+                  <th>T6: Umbrüche mit Hindernissen</th>
+                  <th>passed: 2 / pending: 0 / failed: 0 / total: 2</th>
+               </tr>
+               <tr class="successful">
+                  <th>T6.1: 1780-12-02, S. 14</th>
+                  <th>passed: 1 / pending: 0 / failed: 0 / total: 1</th>
+               </tr>
+               <tr class="successful">
+                  <td>Umbruch bewahren</td>
+                  <td>Success</td>
+               </tr>
+               <tr class="successful">
+                  <th>T6.2: Zitat</th>
+                  <th>passed: 1 / pending: 0 / failed: 0 / total: 1</th>
+               </tr>
+               <tr class="successful">
+                  <td>pc im Wort mit Umbruch</td>
+                  <td>Success</td>
+               </tr>
+            </tbody>
+         </table>
+      </div>
+   </body>
+</html>

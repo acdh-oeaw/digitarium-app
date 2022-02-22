@@ -1,0 +1,505 @@
+<xs:schema xmlns:wdbmeta="https://github.com/dariok/wdbplus/wdbmeta" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" targetNamespace="https://github.com/dariok/wdbplus/wdbmeta" elementFormDefault="qualified" vc:minVersion="1.1">
+
+	<xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="http://www.w3.org/2001/xml.xsd"/>
+
+	<xs:element name="projectMD">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="projectID" type="xs:ID"/>
+				<xs:element name="titleData" maxOccurs="1" type="wdbmeta:titleDataType"/>
+				<xs:element name="metaData" maxOccurs="1" type="wdbmeta:metaDataType"/>
+				<xs:element name="files" type="wdbmeta:filesDataType"/>
+				<xs:element minOccurs="1" type="wdbmeta:processDataType" name="process"/>
+				<xs:element minOccurs="1" type="wdbmeta:structureType" name="struct"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:complexType name="titleDataType">
+		<xs:annotation>
+			<xs:documentation> Contains the most important metadata for this project. These might be used
+				for cataloguing, citation etc. </xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="title">
+				<xs:annotation>
+					<xs:documentation> Contains the title(s) of the project. </xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="xs:string">
+							<xs:attribute name="type" type="xs:string">
+								<xs:annotation>
+									<xs:documentation> May be used to give the type of the title. Suggested values are
+										'main' and 'sub'. </xs:documentation>
+								</xs:annotation>
+							</xs:attribute>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="involved" type="wdbmeta:involvedGroup" minOccurs="0"/>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="date" type="xs:date">
+					<xs:annotation>
+						<xs:documentation>Contains a date associated with the project, e.g. the date of publication. If 
+							multiple date elements are present, the earliest is considered the “from” date, the last the
+							“to” date.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:choice>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<!-- project meta data -->
+	<xs:complexType name="metaDataType">
+		<xs:annotation>
+			<xs:documentation>The meta data section groups together all global meta data for the project described by
+				this file, such as people and organizations involved in its creation and legal information.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="contentGroup" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>
+						Contains a list of what types of content belongs to the project.
+					</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:choice maxOccurs="unbounded">
+						<xs:element name="content" maxOccurs="unbounded">
+							<xs:annotation>
+								<xs:documentation>
+									Contains the information for one type of content, such as “images”, or
+									“introductions”, etc.
+								</xs:documentation>
+							</xs:annotation>
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="description" type="xs:string">
+										<xs:annotation>
+											<xs:documentation>
+												Contains a free description of the content.
+											</xs:documentation>
+										</xs:annotation>
+									</xs:element>
+									<xs:element name="external" type="xs:string" minOccurs="0">
+										<xs:annotation>
+											<xs:documentation>
+												Contains a short documentation where external resources can be found.
+												For internal resources, use the “file” elements.
+											</xs:documentation>
+										</xs:annotation>
+									</xs:element>
+								</xs:sequence>
+								<xs:attribute ref="xml:id" use="required">
+									<xs:annotation>
+										<xs:documentation>
+											A unique ID to refer to this content (e.g. within a contribution assertion.
+										</xs:documentation>
+									</xs:annotation>
+								</xs:attribute>
+							</xs:complexType>
+						</xs:element>
+					</xs:choice>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="involved" type="wdbmeta:involvedGroup" maxOccurs="1"/>
+			<xs:element name="legal" maxOccurs="1" minOccurs="1">
+				<xs:annotation>
+					<xs:documentation>
+						Contains legal information
+					</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="licence">
+							<xs:annotation>
+								<xs:documentation>
+									Contains information about the licence of (parts of) the project.
+								</xs:documentation>
+							</xs:annotation>
+							<xs:complexType>
+								<xs:sequence maxOccurs="1">
+									<xs:element name="part">
+										<xs:annotation>
+											<xs:documentation>
+												Contains a description, to which parts of the project this licence
+												applies. It is possible to add IDREFs to these parts.
+											</xs:documentation>
+										</xs:annotation>
+										<xs:complexType>
+											<xs:simpleContent>
+												<xs:extension base="xs:string">
+													<xs:attribute name="select" type="xs:IDREFS">
+														<xs:annotation>
+															<xs:documentation>
+																Contains pointers to the parts described in the text
+															</xs:documentation>
+														</xs:annotation>
+													</xs:attribute>
+												</xs:extension>
+											</xs:simpleContent>
+										</xs:complexType>
+									</xs:element>
+									<xs:element name="type">
+										<xs:annotation>
+											<xs:documentation>
+												Contains the name of the licence that applies to the parts described in
+												the part element. It SHOULD contain a link to the licence text.
+											</xs:documentation>
+										</xs:annotation>
+										<xs:complexType>
+											<xs:simpleContent>
+												<xs:extension base="xs:string">
+													<xs:attribute name="ref" type="xs:anyURI">
+														<xs:annotation>
+															<xs:documentation>
+																Contains a URI for the text of the licence.
+															</xs:documentation>
+														</xs:annotation>
+													</xs:attribute>
+												</xs:extension>
+											</xs:simpleContent>
+										</xs:complexType>
+									</xs:element>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<!-- "behaviours" -->
+	<xs:complexType name="processDataType">
+		<xs:annotation>
+			<xs:documentation> A process groups together commands which process the data within the edition.
+				It is mandatory to specify the processing target. At least one command needs to be
+				specified. Commands are evaluated from the top and the first with matching condition(s) is
+				considered the one to be used for processing. </xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element maxOccurs="unbounded" name="command">
+				<xs:annotation>
+					<xs:documentation> A command must at least containt a URI to identify the action to be taken and
+						information as to the type of action that is described. Whether a command matches is determined
+						by evaluating @refs and @regex with respect to the ID supplied for processing or by matching
+						@group to a group of entries within the same file. If neither @refs, @regex nor @group are
+						present, the command will match anything and thus no following command will ever be executed.
+					</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="xs:anyURI">
+							<xs:attribute name="type" use="required" type="xs:string">
+								<xs:annotation>
+									<xs:documentation> Gives the type of processing that is specified, e.g. 'xsl',
+										'xquery', 'ant'. </xs:documentation>
+								</xs:annotation>
+							</xs:attribute>
+							<xs:attribute name="refs" type="xs:string">
+								<xs:annotation>
+									<xs:documentation> Contains a whitespace separated sequence of ID values to be
+										checked. If a supplied ID exactly matches any of these values, this criterion
+										matches as a whole. </xs:documentation>
+								</xs:annotation>
+							</xs:attribute>
+							<xs:attribute name="regex" type="xs:string">
+								<xs:annotation>
+									<xs:documentation> Contains one regular expression against which a supplied ID value
+										is tested. </xs:documentation>
+								</xs:annotation>
+							</xs:attribute>
+							<xs:attribute name="group" type="xs:IDREFS">
+								<xs:annotation>
+									<xs:documentation> Points to one or more IDs of groups within the same file, e.g.
+										defined by a file/group/@id. </xs:documentation>
+								</xs:annotation>
+							</xs:attribute>
+							<xs:assert test="(@refs and not(@regex)) or (@regex and not(@refs) or (not(@refs or @regex) and not(following-sibling::wdbmeta:command)))"/>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute use="required" name="target" type="xs:string">
+			<xs:annotation>
+				<xs:documentation> Specifies the processing target; this should be a file format or mime type.
+				</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+
+	<!-- files and grouping -->
+	<xs:complexType name="filesDataType">
+		<xs:annotation>
+			<xs:documentation> Contains a list of all files that belong to the project. These files may be
+				grouped together but not repeated. This grouping may e.g. be used for processing (cf.
+				process/command/@group). </xs:documentation>
+		</xs:annotation>
+		<xs:choice>
+			<xs:element name="file" maxOccurs="unbounded" minOccurs="1" type="wdbmeta:fileType"/>
+			<xs:element name="filegroup" maxOccurs="unbounded" minOccurs="1">
+				<xs:annotation>
+					<xs:documentation> Groups together files within the project. </xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="file" minOccurs="1" type="wdbmeta:fileType"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="ptr" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Points to another metadata file that describes a subproject</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:attributeGroup ref="wdbmeta:pathGroup"/>
+					<xs:attributeGroup ref="wdbmeta:idGroup"/>
+				</xs:complexType>
+			</xs:element>
+		</xs:choice>
+	</xs:complexType>
+
+	<xs:complexType name="fileType">
+		<xs:annotation>
+			<xs:documentation>
+				Groups together relevant metadate about one single file contained within the project.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="uuid" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation> Contains the UUID v3 generated for the file. </xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attributeGroup ref="wdbmeta:idGroup"/>
+		<xs:attributeGroup ref="wdbmeta:pathGroup"/>
+		<xs:attribute name="date" type="xs:dateTimeStamp" use="required">
+			<xs:annotation>
+				<xs:documentation> Contains the timestamp of when the file was last modified. </xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="mime">
+			<xs:annotation>
+				<xs:documentation> May contain the MIME type of the file if it is not abvious e.g. from the extension.
+				</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="status">
+			<xs:annotation>
+				<xs:documentation> Contains the status of the file; default is "public". </xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="public"/>
+					<xs:enumeration value="beta"/>
+					<xs:enumeration value="inProgress"/>
+					<xs:enumeration value="internal"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:complexType>
+
+	<!-- structures -->
+	<xs:complexType name="structureType">
+		<xs:annotation>
+			<xs:documentation>
+				Contains a definition about how views to the files are ordered, the closest analogy being a table of
+				contents. May contains any combination of either a view (which point to processes) or other struct.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:choice minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="struct" type="wdbmeta:structureType"/>
+			<xs:element name="view">
+				<xs:annotation>
+					<xs:documentation>
+						Represents a link to a process for one single file
+					</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:attributeGroup ref="wdbmeta:fileGroup"/>
+					<xs:attribute name="target" type="xs:string">
+						<xs:annotation>
+							<xs:documentation>
+								References one process/@target as defined in this file. If none is specified, the
+								implementation should use the first process defined in this file by document order.
+							</xs:documentation>
+						</xs:annotation>
+					</xs:attribute>
+					<xs:attributeGroup ref="wdbmeta:labellingGroup"/>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="import">
+				<xs:annotation>
+					<xs:documentation>
+						Points to a parent to which this file describes a subproject
+					</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:attributeGroup ref="wdbmeta:pathGroup"/>
+				</xs:complexType>
+			</xs:element>
+		</xs:choice>
+		<xs:attributeGroup ref="wdbmeta:labellingGroup"/>
+		<xs:attribute name="file" type="xs:IDREF">
+			<xs:annotation>
+				<xs:documentation>
+					Contains the reference to the ID of one file defined in this file.
+				</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:assert test="not(@file and *)"/>
+	</xs:complexType>
+	
+	<!-- people and organizations -->
+	<xs:complexType name="involvedGroup">
+		<xs:annotation>
+			<xs:documentation>
+				Contains elements for those who can be involved in a project or the original text, namely people or
+				any kind of organization.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:choice minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="person" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>
+						Contains names and all other relevant information about people
+					</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="xs:string">
+							<xs:attribute ref="xml:id">
+								<xs:annotation>
+									<xs:documentation>
+										A unique ID to identify the person
+									</xs:documentation>
+								</xs:annotation>
+							</xs:attribute>
+							<xs:attribute name="contribution" type="xs:string">
+								<xs:annotation>
+									<xs:documentation>
+										A comma separated list of what has been contributed
+									</xs:documentation>
+								</xs:annotation>
+							</xs:attribute>
+							<xs:attribute name="role" type="xs:string">
+								<xs:annotation>
+									<xs:documentation>
+										Describes the role a person played
+									</xs:documentation>
+								</xs:annotation>
+							</xs:attribute>
+							<xs:attribute name="href" type="xs:anyURI">
+								<xs:annotation>
+									<xs:documentation>
+										Contains a reference to additional information, preferably an authority file.
+									</xs:documentation>
+								</xs:annotation>
+							</xs:attribute>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="org" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>
+						Contains names and all other relevant information about organizations
+					</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="xs:string">
+							<xs:attribute ref="xml:id">
+								<xs:annotation>
+									<xs:documentation>
+										A unique ID to identify the organization
+									</xs:documentation>
+								</xs:annotation>
+							</xs:attribute>
+							<xs:attribute name="contribution" type="xs:string">
+								<xs:annotation>
+									<xs:documentation>
+										A comma separated list of what has been contributed
+									</xs:documentation>
+								</xs:annotation>
+							</xs:attribute>
+							<xs:attribute name="role" type="xs:string">
+								<xs:annotation>
+									<xs:documentation>
+										Describes the role an organization played
+									</xs:documentation>
+								</xs:annotation>
+							</xs:attribute>
+							<xs:attribute name="href" type="xs:anyURI">
+								<xs:annotation>
+									<xs:documentation>
+										Contains a reference to additional information, preferably an authority file.
+									</xs:documentation>
+								</xs:annotation>
+							</xs:attribute>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+		</xs:choice>
+	</xs:complexType>
+	
+	<xs:attributeGroup name="labellingGroup">
+		<xs:attribute name="label" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>
+					Contains a string representing this struct or view within the "table of contents".
+				</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="order" type="xs:integer">
+			<xs:annotation>
+				<xs:documentation>
+					Optionally defines a value by which entries are to be ordered if they are not to be
+					returned in document order.
+				</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="private" type="xs:boolean">
+			<xs:annotation>
+				<xs:documentation>
+					Optionally sets the structure or view to be private. How this is treated is up to the
+					implementing software.
+				</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:attributeGroup>
+
+	<xs:attributeGroup name="fileGroup">
+		<xs:attribute name="file" type="xs:IDREF" use="required">
+			<xs:annotation>
+				<xs:documentation>
+					Contains the reference to the ID of one file defined in this file.
+				</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:attributeGroup>
+	
+	<xs:attributeGroup name="pathGroup">
+		<xs:attribute name="path" type="xs:anyURI" use="required">
+			<xs:annotation>
+				<xs:documentation> Contains the (relative) path to the file </xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:attributeGroup>
+	
+	<xs:attributeGroup name="idGroup">
+		<xs:attribute ref="xml:id" use="required">
+			<xs:annotation>
+				<xs:documentation>
+					the id under which this file entry is referenced in this file. if a global id is defined in the
+					target file, these two values should be identical to avoid confusion.
+				</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:attributeGroup>
+</xs:schema>

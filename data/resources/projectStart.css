@@ -1,0 +1,229 @@
+/* header */
+header h1 {
+  color: black;
+}
+
+/* aside */
+aside {
+  padding: 0 25px;
+}
+aside div {
+  padding-bottom: 0.5ex;
+}
+aside p {
+  margin-bottom: 0;
+}
+aside div p {
+    color: #595f65;
+}
+aside figure {
+  margin: 0;
+}
+figcaption {
+    font-size: 0.75em;
+    line-height: 1em;
+    text-align: right;
+    color: #585e65b5;
+    margin-top: 5px;
+}
+
+/* main */
+/* Liste der Jahrzehnte */
+.decades {
+  margin-right: 10px;
+}
+.decades ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+.decades li {
+  display: inline-block;
+  margin-right: 10px;
+}
+.decades img {
+  height: 1em;
+  margin-left: 0px;
+  margin-right: 5px;
+  vertical-align: text-top;
+}
+#stats {
+  padding-right: 15px;
+}
+#stats span {
+  display: inline-block;
+  text-align: center;
+  padding: 2px 0px;
+}
+#stats > span {
+    font-family: sans-serif;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 15px;
+    margin-top: 5px;
+    margin-left: 10px;
+}
+span.filter-heading {
+    font-family: sans-serif;
+    margin-top: 10px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    margin-left: 10px;
+}
+
+/* Übersicht der Ausgaben */
+.month {
+  display: none;
+  flex-wrap: wrap;
+}
+
+.month h1 {
+    font-size: 1.5em;
+    width: 100%;
+    text-align: left;
+    margin: 15px 0 -15px 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    padding-bottom: 12px;
+}
+
+span.separator-title {
+    border-bottom: 1px solid #444444;
+    padding-bottom: 9px;
+}
+
+.issue {
+  width: calc(20% - 10px);
+  margin-right: 10px;
+  padding: 20px 0;
+  text-align: left;
+  /* box-shadow: inset 0px 0px 2px 0px #a7a7a7b3; */
+  position: relative;
+}
+
+.issue img {
+  position: relative;
+  width: 100%;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.issue a {
+  display: inline-block;
+  font-weight: 600;
+  padding: 0 10px;
+  color: #535b69;
+  margin-top: 10px;
+  transition: all ease 0.3s;
+}
+
+.issue a:hover {
+  opacity: 70%;
+}
+
+#stats > div {
+    display: flex;
+}
+div.nc3 > span, .nc3 img {
+  background-color: #327e82;
+  /* color: #fff; */
+}
+div.nc2 > span, .nc2 img {
+  background-color: #59c9d4;
+}
+div.nc1 > span, .nc1 img {
+  background-color: #d2f6f9;
+}
+div.nc0 > span, .nc0 img {
+  background-color: #fbfbff;
+  border: 1px solid #e8e8e8;
+}
+#stats > div > div > span {
+    border: 1px solid #98cbce8c;
+    width: calc(100% - 20px);
+    margin: 0 10px;
+}
+
+@media screen and (max-width: 619px) {
+  .issue img {
+    padding: 5px;
+  }
+}
+@media screen and (max-width: 509px) {
+  .issue img {
+    padding: 3px;
+  }
+  header h1 {
+    height: 2.8em;
+  }
+  .month h1, header h1 {
+    font-size: 1.1em;
+    margin-bottom: 0;
+  }
+  aside p {
+    font-size: 0.9em;
+  }
+  a {
+    font-size: 0.9em;
+  }
+}
+@media screen and (max-width: 399px) {
+  #auth {
+    display: none;
+  }
+}
+
+#auth a {
+  color: white;
+}
+
+#stats span {
+    border: 0;
+}
+
+.sidebar-color-legend > div > span {
+    width: 50px;
+    display: inline-block;
+    height: 20px;
+    vertical-align: top;
+    border: 1px solid #98cbce8c;
+    margin-right: 5px;
+}
+
+.sidebar-color-legend {
+    margin-top: 15px;
+    padding-bottom: 0;
+    margin-bottom: -5px;
+    font-size: 15px;
+    border: 1px solid #e2e2e2;
+    padding: 10px 10px 0 10px;
+    color: #3d4146;
+}
+
+.sidebar-color-legend > div {
+    padding-bottom: 10px;
+}
+
+#stats > div > div {
+    min-width: 58px;
+}
+
+aside form {
+    display: flex;
+}
+aside form input:first-child {
+    width: 50%;
+    margin-right: 10px;
+}
+aside form select {
+    margin-right: 10px;
+}
+aside form .btn {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+aside div p:first-child {
+    font-weight: 500;
+    color: #505050;
+}

@@ -1,0 +1,12 @@
+aside div:not(:first-child) {
+    display: none;
+}
+aside hr {
+    display: none;
+}
+.match {
+    background-color: yellow;
+}
+#auth a {
+  color: white;
+}

@@ -1,0 +1,53 @@
+<div>
+  <h2>Suche im Wien[n]erischen DIGITARIUM</h2>
+  <p>Das Wien[n]erische DIGITARIUM bietet seinen Nutzer*innen mehrere Möglichkeiten, im Volltext zu suchen. Die einfachste Variante ist die Suche nach einer Zeichenfolge, wie etwa Kaufmann. Als Ergebnis hiervon erhält man alle Wortformen, die exakt der gesuchten Zeichenfolge entsprechen. Groß- und Kleinschreibung muss dabei nicht berücksichtigt werden.</p>
+  <p>Neben dieser einfachen Suche besteht weiters die Option, mithilfe von Anführungszeichen (" ") nach Phrasen zu suchen: Während die einfache Suche man hat Nachricht einer „oder“-Logik folgt und jedes der drei Wörter einzeln sucht, ergibt hingegen "man hat Nachricht" nur Belege, in denen alle drei Wörter nacheinander vorkommen.</p>
+  <p>Mit der sogenannten Wildcard * kann nach einer Zeichenfolge gesucht werden, deren Ende offen ist. Der Asterisk steht dabei stellvertretend für eine beliebig lange Zeichenfolge – so auch im Falle des Suchbefehls Kauf*, der neben Kaufmann auch Ergebnisse wie Kaufmannschaft oder kaufmännisch liefert. Zu beachten ist hierbei, dass die Wildcard * nur am Ende einer Zeichenfolge gesetzt werden darf.</p>
+  <p>Die beschriebenen Möglichkeiten der Suche im Wien[n]erischen DIGITARIUM werden durch die Verwendung von regulären Ausdrücken (RegEx) erweitert. Dabei werden vor und nach jedem Suchbefehl Schrägstriche (/) gesetzt, damit dieser als solcher erkannt wird.</p>
+  <p>Mit Suchbefehlen im RegEx-Format eröffnet sich eine Vielzahl von Handlungsmöglichkeiten: So lässt sich der Punkt (.) etwa an einer beliebigen Stelle einer Zeichenfolge als Wildcard einsetzen. Ein Beispiel hierfür wäre die Suche /.iebe/, die im Wien[n]erischen DIGITARIUM sowohl Diebe als auch Liebe ergibt. Der Punkt steht in dieser Form der Suche nur für ein einzelnes Zeichen, sodass im Korpus vorhandene Begriffe wie triebe oder bliebe mit obiger Anfrage nicht aufgefunden werden. Folglich müssen, je nach gewünschter Anzahl der beliebigen Zeichen, entweder Punkte oder Quantifikatoren gesetzt werden.</p>
+  <p>Mit der Auswahlfunktion durch eckige Klammern ([ ]) kann man nach ähnlichen Begriffen mit verschiedenen Anfangsbuchstaben suchen. Verwendet man beispielsweise den Suchbefehl /[mkd]an/, so erhält man die Zeichenfolgen man, kan und dan. Auswahlfunktionen können dabei an jeder Stelle einer Zeichenfolge stehen und mit beliebig vielen Zeichen, aus welchen immer genau eines ausgewählt wird, gesetzt werden. Diese Auswahlfunktion kann sich auf Bereiche von Zeichen oder Zahlen beziehen. Hierfür wird der Bindestrich (-) gebraucht: Die Suchanfrage /[2-7]/ findet alle Zahlen von 2 bis 7, während /[a-d]/ alle Buchstaben von a bis d ergibt. Wird nach der ersten eckigen Klammer ein sogenannter Hut (^) gesetzt, werden die sich innerhalb der Klammer befindenden Zeichen von den Ergebnissen ausgeschlossen. Somit liefert die Suche /[^a-u]an/ nur den Beleg van, nicht aber dan oder kan. Ob dabei die Auswahlfunktion [^A-U] oder [^a-u] gewählt wird, spielt – entgegen der üblichen Verwendung von RegEx – keine Rolle, da im Wien[n]erischen DIGITARIUM nicht zwischen Groß- und Kleinbuchstaben differenziert wird. Ferner können verschiedene Auswahlfunktionen auch in ein- und demselben Suchbefehl auftreten, wie etwa bei der Anfrage /[ao][mb]/ – hier scheinen in den Ergebnissen die Begriffe am, ab und ob auf, da aus jeder eckigen Klammer genau ein Zeichen ausgewählt wird und keine Belege für die vierte Möglichkeit om vorliegen.</p>
+  <p>Mit Quantifikatoren können Suchbefehle weiter spezifiziert werden. Hierfür werden geschwungene Klammern ({{ }}) herangezogen, in welchen die Auftrittshäufigkeit eines Zeichens festgelegt wird: {{2}} bedeutet, dass ein vorhergehendes Zeichen zweimal auftreten muss, während {{6-8}} sein sechsmaliges, siebenmaliges oder achtmaliges Vorhandensein verlangt. Der Befehl /f{{2}}/ ergibt somit die Zeichenfolgen FF oder ff und die Anfrage /in{{2}}/ den Beleg inn. An diesen beiden Ergebnissen zeigen sich zwei essentielle Aspekte der Suche im Wien[n]erischen DIGITARIUM: Bei den gefundenen Zeichenfolgen muss es sich um eigenständige Token – im Sinne einer Abgrenzung über Leer- oder Satzzeichen – handeln. Der jeweilige Quantifikator bezieht sich immer nur auf das direkt vor ihm stehende Zeichen.</p>
+  <p>Quantifikatoren funktionieren auch in Kombination mit anderen Suchmustern: So kann man etwa Quantifikatoren und Auswahlfunktionen verbinden, wie in dem Suchbefehl /[a-i]{{4}}/, der zu habe, gebe, gehe, Haag und anderen Belegen mit vier Buchstaben, die sich im Alphabet zwischen a und i befinden, führt. Im Hinblick auf die Praxis könnte sich eine solche Suchanfrage dazu eignen, zu sehen, welche Buchstaben(kombinationen) im Wien(n)erischen DIGITARIUM besonders häufig verwendet werden. Praktisch ist aber auch die Anfrage /.{{8}}/, durch welche alle aus acht Zeichen bestehenden Wörter, wie nunmehro, identifiziert werden können.</p>
+  <p>Zwei spezielle Quantifikatoren stellen darüber hinaus der Asterisk (*) und das Pluszeichen (+) dar. Zweiteres Symbol achtet darauf, dass das ihm vorangehende Zeichen mindestens einmal in dem gefundenen Beleg vorkommt, während es bei ersterem darum geht, dass das Zeichen mindestens nullmal auftaucht. So hat etwa die Suchsyntax /brief+e*/ nicht nur Brief und Brieff, sondern auch Brieffe und Briefe zum Ergebnis. Folglich eignen sich Asterisk und Pluszeichen sehr gut dafür, verschiedene Schreibweisen eines Begriffs in einer einzelnen Suchanfrage zu integrieren. Eine ähnliche Funktion trägt auch das Fragezeichen (?). Dieses markiert optionale Zeichen, die in der gesuchten Zeichenfolge vorkommen können, jedoch nicht müssen. Exemplarisch lässt sich dazu auf die Suche nach /Co?urier/ verweisen, welche die Formen Courier und Curier berücksichtigt. Eine andere Möglichkeit, auf diese graphematische Variation einzugehen, wäre die Verwendung von konditionalen Bedingungen. Indem man zwei mögliche Varianten durch einen senkrechten Strich (|) voneinander trennt und in eine runde Klammer stellt. Die Suchsyntax /(Cu|Cou)rier/ führt damit zu den gleichen Ergebnissen wie die vorherige Anfrage.</p>
+  <p>Neben all den beschriebenen Möglichkeiten gibt es bei der Suche im Wien(n)erischen DIGITARIUM auch Limitationen, da nicht alle Optionen von RegEx zur Verfügung stehen. So kann bei der Verwendung regulärer Ausdrücke etwa nicht gleichzeitig nach Phrasen und allgemein nicht nach Zeichenklassen, Satzzeichen oder Leerzeichen gesucht werden. Dies hat zur Folge, dass eine systematische Untersuchung von Phänomenen dieser Bereiche derzeit nicht möglich ist.</p>
+  <table>
+    <tr>
+      <th>Suchbefehl</th>
+      <th>Beispielhafte Ergebnisse aus dem Wien[n]erischen DIGITARUM</th>
+    </tr>
+    <tr><td>briefe oder /briefe/</td><td>Briefe</td></tr>
+    <tr><td>man hat Nachricht</td>
+      <td>man, hat, Nachricht</td></tr>
+    <tr><td>"man hat Nachricht"</td>
+      <td>man hat Nachricht</td></tr>
+    <tr><td>brief* oder /brief./</td>
+      <td>Briefe, Brieffe, Brief, Brieffen, …</td></tr>
+    <tr><td>/.iebe/</td>
+      <td>Diebe, Liebe, …</td></tr> 
+    <tr><td>/..iebe/</td>
+      <td>Triebe, bliebe, …</td></tr>
+    <tr><td>/.+iebe/</td>
+      <td>Diebe, Liebe, Triebe, bliebe, …</td></tr>
+    <tr><td>/[mkd]an/</td>
+      <td>man, dan, kan</td></tr>
+    <tr><td>/[^a-u]an/</td>
+      <td>van</td></tr>
+    <tr><td>/[ao][mb]/</td>
+      <td>am, ab, ob</td></tr>
+    <tr><td>/f{{2}}/</td>
+      <td>FF., ff</td></tr>
+    <tr><td>/in{{2}}/</td>
+      <td>inn</td></tr>
+    <tr><td>/[a-i]{{4}}/</td> 
+      <td>habe, gebe, gehe, Haag, …</td></tr>
+    <tr><td>/.{{8}}/</td>
+      <td>nunmehro, Audientz, …</td></tr>
+    <tr><td>/brief+e*/</td>
+      <td>Brief, Brieff, Brieffe, Briefe</td></tr>
+    <tr><td>/Co?urier/</td>
+      <td>Courier, Curier</td></tr>
+    <tr><td>/(Cu|Cou)rier/</td>
+      <td>Courier, Curier</td></tr>
+  </table>
+  <p>&#x20;</p>
+</div>

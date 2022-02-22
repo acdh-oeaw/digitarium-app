@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description xmlns:x="http://www.jenitennison.com/xslt/xspec"
+    xmlns="http://www.tei-c.org/ns/1.0"
+    stylesheet="transkribus2tei.xsl">
+    <x:scenario label="einfaches Rechteck">
+        <x:context mode="pts">
+            <facsimile>
+                <zone points='0,0 2366,0 2366,3302 0,3302' rendition='printspace'/>
+            </facsimile>
+        </x:context>
+        <x:expect label="identisch">
+            <facsimile>
+                <zone points='0,0 2366,0 2366,3302 0,3302' rendition='printspace'/>
+            </facsimile>
+        </x:expect>
+    </x:scenario>
+    <x:scenario label="geschachtelt">
+        <x:context mode="pts">
+            <facsimile>
+                <zone points='887,134 1373,134 2203,150 2203,247 529,249 53,249 53,155' rendition='TextRegion' subtype='header' xml:id='facs_1_TextRegion_1502698158579_1'>
+                    <zone points='1016,122 2071,137 2186,179 2207,191 2207,228 2155,249 2144,252 2124,252 381,252 75,249 49,242 49,163 80,143 86,142 1003,122' rendition='Line' xml:id='facs_1_line_1506085507810_5'/>
+                </zone>
+            </facsimile>
+        </x:context>
+        <x:expect label="geschachtelt mit Rechteck">
+            <facsimile>
+                <zone points='53,134 2203,134 2203,249 53,249' rendition='TextRegion' subtype='header' xml:id='facs_1_TextRegion_1502698158579_1'>
+                    <zone points='49,122 2207,122 2207,252 49,252' rendition='Line' xml:id='facs_1_line_1506085507810_5'/>
+                </zone>
+            </facsimile>
+        </x:expect>
+    </x:scenario>
+</x:description>

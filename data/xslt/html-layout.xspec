@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns="http://www.tei-c.org/ns/1.0"
+	xmlns:local="." stylesheet="tei-transcript.xsl">
+	<x:scenario label="nur zentriert / Volltext">
+		<x:scenario label="1712-05-18 Titels. unten">
+			<x:context>
+				<div xml:id="d1" type="page" n="1">
+					<fw><milestone type="separator" rend="horizontal" unit="section" rendition="#f"/></fw>
+					<div xml:id="d2">
+						<head rendition="#fc" facs="#facs_1_r_16_1">
+							<lb facs="#facs_1_tl_16"/><w xml:id="w86">Wien</w><pc xml:id="w98">.</pc>
+						</head>
+						<p xml:id="p2" rendition="#f" facs="#facs_1_r_16_2" rend="noindent">
+							<lb facs="#facs_1_tl_17"/><w xml:id="w99">MJttwoch</w>
+							<pc xml:id="w100">/</pc>
+							<w xml:id="w101">den</w>
+							<w xml:id="w102">18</w><pc xml:id="w103">.</pc>
+							<w xml:id="w104">Maj</w><pc xml:id="w105">.</pc>
+							<w xml:id="w106">Nachdeme</w>
+							<w xml:id="w107">bei</w>
+							<w xml:id="w108">Jhro</w>
+							<w xml:id="w109">Röm</w><pc xml:id="w110">.</pc>
+							<w xml:id="w111">Kaiserl</w><pc xml:id="w112">.</pc>
+							<w xml:id="w113">auch</w>
+						</p>
+						<p xml:id="p3" rendition="#f" facs="#facs_1_region_1501078390102_425"><w xml:id="w114">Wien</w> </p>
+						<p xml:id="p4" rendition="#f" facs="#facs_1_TextRegion_1501078547944_434"><w xml:id="w115">in</w> </p>
+					</div>
+					<fw type="sig" facs="#facs_1_TextRegion_1505303750273_6" rendition="#c">
+						<lb facs="#facs_1_line_1505303750308_8"/><w xml:id="w383">)(</w>
+					</fw>
+					<fw facs="#facs_1_TextRegion_1505303750272_5" type="catch" rendition="#rr">
+						<lb facs="#facs_1_line_1505303750307_7"/><w xml:id="w384">Anse</w><pc xml:id="w385"
+							>=</pc>
+					</fw>
+				</div>
+			</x:context>
+			<x:expect label="eine zentrierte div">
+				<div xmlns="" xmlns:local="." class="page">
+					<div class="pageHeader">
+						<span class="triF">
+							<hr class="f"/>
+						</span>
+					</div>
+					<div class="divLF">
+						<div class="divF">
+							<h4 class="fc">
+								<span id="w86" class="w" title="w86: Wien">Wien</span>
+								<span id="w98" class="pc">.</span>
+							</h4>
+							<p id="p2" class="content f noindent">
+								<span id="w99" class="w" title="w99: MJttwoch">MJttwoch</span>
+								<span id="w100" class="pc">/</span>
+								<span id="w101" class="w" title="w101: den">den</span>
+								<span id="w102" class="w" title="w102: 18">18</span>
+								<span id="w103" class="pc">.</span>
+								<span id="w104" class="w" title="w104: Maj">Maj</span>
+								<span id="w105" class="pc">.</span>
+								<span id="w106" class="w" title="w106: Nachdeme">Nachdeme</span>
+								<span id="w107" class="w" title="w107: bei">bei</span>
+								<span id="w108" class="w" title="w108: Jhro">Jhro</span>
+								<span id="w109" class="w" title="w109: Röm">Röm</span>
+								<span id="w110" class="pc">.</span>
+								<span id="w111" class="w" title="w111: Kaiserl">Kaiserl</span>
+								<span id="w112" class="pc">.</span>
+								<span id="w113" class="w" title="w113: auch">auch</span>
+							</p>
+							<p id="p3" class="content f "><span class="w" title="w114: Wien" id="w114">Wien</span></p>
+							<p id="p4" class="content f noindent "><span class="w" title="w115: in" id="w115">in</span></p>
+						</div>
+					</div>
+					<div class="pageFooter">
+						<span class="triL"/>
+						<span class="triC sig">
+							<span class="fw c">
+								<span id="w383" class="w" title="w383: )(">)(</span>
+							</span>
+						</span>
+						<span class="triR catch">
+							<span class="fw rr">
+								<span id="w384" class="w" title="w384: Anse">Anse</span>
+								<span id="w385" class="pc">=</span>
+							</span>
+						</span>
+					</div>
+				</div>
+			</x:expect>
+		</x:scenario>
+	</x:scenario>
+	<x:scenario label="Nummer - hr - Titel - hr - Text">
+		<x:context>
+			<div xml:id="d42" type="page" n="9">
+				<pb xml:id="pag9" n="9"/>
+				<fw facs="#facs_9_r_1_1" type="pageNum" rendition="#fc">
+					<lb xml:id="z710" facs="#facs_9_tl_1"/><w xml:id="w4863">259</w></fw>
+				<fw><milestone type="separator" rend="horizontal" unit="section" rendition="#f"/></fw>
+				<fw xml:id="tit4" type="num" facs="#facs_9_r_2_1" rendition="#c">
+					<lb xml:id="z711" facs="#facs_9_tl_2"/><hi style="font-family: Antiqua;"><w xml:id="w4864"
+							>Anno</w></hi>
+					<w xml:id="w4865">1741</w><pc xml:id="w4866">.</pc>
+					<pc xml:id="w4867">(</pc><w xml:id="w4868">Anhang</w>
+					<w xml:id="w4869">zu</w>
+					<hi style="font-family: Antiqua;"><w xml:id="w4870">Num</w><pc xml:id="w4871">.</pc></hi>
+					<w xml:id="w4872">24</w><pc xml:id="w4873">.</pc><pc xml:id="w4874">)</pc>
+					<w xml:id="w4875">25</w><pc xml:id="w4876">.</pc>
+					<hi style="font-family: Antiqua;"><w xml:id="w4877">Martii</w><pc xml:id="w4878"
+						>.</pc></hi>
+				</fw>
+				<fw><milestone type="separator" rend="horizontal" unit="section" rendition="#f"/></fw>
+				<div xml:id="d43">
+					<head xml:id="hl28" rendition="#lc" facs="#facs_9_TextRegion_1503581304053_25">
+						<lb xml:id="z712" facs="#facs_9_tl_4"/><w xml:id="w4879">Aus</w>
+						<w xml:id="w4880">Jtalien</w><pc xml:id="w4881">.</pc>
+					</head>
+				</div>
+			</div>
+		</x:context>
+		<x:expect label="hr um docTitle herum">
+			<div xmlns="" xmlns:local="." class="page">
+				<div class="pagebreak" id="pag9">‖ [<a>9</a>] </div>
+				<div class="pageHeader">
+					<span class="triF pageNum">
+						<span class="fw fc">
+							<span id="w4863" class="w" title="w4863: 259">259</span>
+						</span>
+					</span>
+					<span class="triF"><hr class="f"/></span>
+					<span class="triC num" id="tit4">
+						<span class="fw c">
+							<span id="w4864" class="w italic" title="w4864: Anno">Anno</span>
+							<span id="w4865" class="w" title="w4865: 1741">1741</span>
+							<span id="w4866" class="pc">.</span>
+							<span id="w4867" class="pc">(</span>
+							<span id="w4868" class="w" title="w4868: Anhang">Anhang</span>
+							<span id="w4869" class="w" title="w4869: zu">zu</span>
+							<span id="w4870" class="w italic" title="w4870: Num">Num</span>
+							<span id="w4871" class="pc">.</span>
+							<span id="w4872" class="w" title="w4872: 24">24</span>
+							<span id="w4873" class="pc">.</span>
+							<span id="w4874" class="pc">)</span>
+							<span id="w4875" class="w" title="w4875: 25">25</span>
+							<span id="w4876" class="pc">.</span>
+							<span id="w4877" class="w italic" title="w4877: Martii">Martii</span>
+							<span id="w4878" class="pc">.</span>
+						</span>
+					</span>
+					<span class="triF">
+						<hr class="f"/>
+					</span>
+				</div>
+				<div class="divLF">
+					<div class="divL">
+						<h4 id="hl28" class="lc">
+							<span id="w4879" class="w" title="w4879: Aus">Aus</span>
+							<span id="w4880" class="w" title="w4880: Jtalien">Jtalien</span>
+							<span id="w4881" class="pc">.</span>
+						</h4>
+					</div>
+				</div>
+				<div class="pageFooter">
+					<span class="triL"/>
+					<span class="triC"/>
+				</div>
+			</div>
+		</x:expect>
+	</x:scenario>
+
+	<x:scenario label="gemischte Ausrichtungen">
+		<x:context>
+			<div type="page">
+				<pb xml:id="pag9" n="9"/>
+				<fw facs="#facs_9_r_1_1" type="pageNum" rendition="#c">
+					<lb xml:id="z710" facs="#facs_9_tl_1"/><w xml:id="w4863">259</w></fw>
+				<fw><milestone type="separator" rend="horizontal" unit="section" rendition="#f"/></fw>
+				<div>
+					<head rendition="#fc"/>
+					<p rendition="#lc"/>
+					<p rendition="#l"/>
+					<p rendition="#l"/>
+					<p rendition="#r"/>
+				</div>
+				<div>
+					<head rendition="#fc"/>
+					<p rendition="#fc"/>
+					<p rendition="#l"/>
+					<p rendition="#r"/>
+					<p rendition="#l"/>
+					<p rendition="#r"/>
+				</div>
+			</div>
+			<div type="page">
+				<div>
+					<p rendition="#l"/>
+					<p rendition="#c"/>
+					<p rendition="#r"/>
+					<p rendition="#l"/>
+					<p rendition="#c"/>
+					<p rendition="#r"/>
+				</div>
+			</div>
+		</x:context>
+		<x:expect label="lcr">
+			<div class="page" xmlns="" xmlns:local=".">
+				<div class="pagebreak" id="pag9">‖ [<a>9</a>] </div>
+				<div class="pageHeader">
+					<span class="triC pageNum">
+						<span class="fw c">
+							<span id="w4863" class="w" title="w4863: 259">259</span>
+						</span>
+					</span>
+					<span class="triF"><hr class="f"/></span>
+				</div>
+				<div class="divLR">
+					<div class="divF"><h4 class="fc"/></div>
+					<div class="divL">
+						<p id="" class="content lc noindent "/>
+						<p id="" class="content l noindent "/>
+						<p id="" class="content l noindent "/>
+					</div>
+					<div class="divR">
+						<p id="" class="content r noindent "/>
+					</div>
+				</div>
+				<div class="divLR">
+					<div class="divF">
+						<h4 class="fc"/>
+						<p id="" class="content fc noindent "/>
+					</div>
+					<div class="divL">
+						<p id="" class="content l noindent "/>
+					</div>
+					<div class="divR">
+						<p id="" class="content r noindent "/>
+					</div>
+				</div>
+				<div class="divLR">
+					<div class="divL">
+						<p id="" class="content l noindent "/>
+					</div>
+					<div class="divR">
+						<p id="" class="content r noindent "/>
+					</div>
+				</div>
+				<div class="pageFooter">
+					<span class="triL"/>
+					<span class="triC"/>
+				</div>
+			</div>
+			<div class="page" xmlns="" xmlns:local=".">
+				<div class="pageHeader"/>
+				<div class="divLCR">
+					<div class="divL">
+						<p id="" class="content l noindent "/>
+					</div>
+					<div class="divC">
+						<p id="" class="content c noindent "/>
+					</div>
+					<div class="divR">
+						<p id="" class="content r noindent "/>
+					</div>
+				</div>
+				<div class="divLCR">
+					<div class="divL">
+						<p id="" class="content l noindent "/>
+					</div>
+					<div class="divC">
+						<p id="" class="content c noindent "/>
+					</div>
+					<div class="divR">
+						<p id="" class="content r noindent "/>
+					</div>
+				</div>
+				<div class="pageFooter">
+					<span class="triL"/>
+					<span class="triC"/>
+				</div>
+			</div>
+		</x:expect>
+	</x:scenario>
+	
+	<x:scenario label="1712-11-02">
+		<x:context>
+			<div xml:id="d35" type="page" n="10">
+				<pb xml:id="pag10" n="10" />
+				<div xml:id="d36"><head xml:id="hl20" rendition="#f" facs="#facs_10_TextRegion_1501493968590_49" /></div>
+				<div xml:id="d37">
+					<head xml:id="hl21" rendition="#fc" facs="#facs_10_r_1_3"></head>
+					<p xml:id="p29" rendition="#f" facs="#facs_10_r_1_4" rend="noindent"><w xml:id="w1114">Wien</w></p>
+					<p xml:id="p30" rendition="#f" facs="#facs_10_r_1_5" />
+					<p xml:id="p31" rendition="#f" facs="#facs_10_r_1_6"><w xml:id="w1115">wie</w></p>
+					<milestone type="separator" rend="horizontal" unit="section" rendition="#f"/>
+				</div>
+				<div xml:id="d38">
+					<head xml:id="hl22" rendition="#f" facs="#facs_10_r_2_1"/>
+					<p xml:id="p32" rendition="#f" facs="#facs_10_r_3_1" rend="noindent"><w xml:id="w1116">Wien</w></p>
+					<p rendition="#l" />
+					<p xml:id="p33" rendition="#rr" facs="#facs_10_r_4_1" />
+				</div>
+			</div>
+		</x:context>
+		<x:expect label="divR am Ende nach divL">
+			<div class="page" xmlns="" xmlns:local=".">
+				<div class="pagebreak" id="pag10">‖ [<a>10</a>] </div>
+				<div class="pageHeader"></div>
+				<div class="divLR">
+					<div class="divF">
+						<h4 id="hl20" class="f" />
+						<h4 id="hl21" class="fc" />
+						<p id="p29" class="content f noindent"><span class="w" id="w1114" title="w1114: Wien">Wien</span></p>
+						<p id="p30" class="content f noindent "/>
+						<p id="p31" class="content f noindent "><span class="w" id="w1115" title="w1115: wie">wie</span></p>
+						<hr class="f"/>
+						<h4 id="hl22" class="f"/>
+						<p id="p32" class="content f noindent"><span class="w" id="w1116" title="w1116: Wien">Wien</span></p>
+					</div>
+					<div class="divL">
+						<p id="" class="content l noindent "/>
+					</div>
+					<div class="divR">
+						<p id="p33" class="content rr noindent "/>
+					</div>
+				</div>
+				<div class="pageFooter"><span class="triL"></span><span class="triC"></span></div>
+			</div>
+		</x:expect>
+	</x:scenario>
+</x:description>

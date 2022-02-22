@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description xmlns:x="http://www.jenitennison.com/xslt/xspec"
+	xmlns="http://www.tei-c.org/ns/1.0"
+	stylesheet="tok3.xsl">
+	<x:scenario label="T1: unclear">
+		<x:context>
+			<w>Reihensch<unclear>if<pc>=</pc></unclear><lb facs="#facs_4_line_1503139171867_1081"/>fen</w>
+		</x:context>
+		<x:expect label="unverändert, aber mit ID">
+			<w xml:id="w1">Reihensch<unclear>if<pc xml:id="w2">=</pc></unclear><lb facs="#facs_4_line_1503139171867_1081"/>fen</w>
+		</x:expect>
+	</x:scenario>
+	
+	<x:scenario label="T2: Seiten übernehmen">
+		<x:scenario label="T2.1: keine Titelei auf S.1">
+			<x:context>
+				<body>
+					<div type="page" n="1">
+						<pb n="1" facs="#facs_1"/>
+						<div>
+							<head rendition="#f" facs="#facs_1_r_1_1">
+								<lb facs="#facs_1_tl_1"/> </head>
+							<milestone type="separator" rend="horizontal" unit="section" rendition="#f"/>
+							<figure type="graphic" facs="#facs_1_Graphic_1505296410150_18"/></div>
+						<div><head rendition="#fc" facs="#facs_1_r_1_2">
+						<lb facs="#facs_1_tl_2"/> </head>
+							<figure type="graphic" facs="#facs_1_r_2"/></div>
+						<div>
+							<head rendition="#?18-82-100--264-1484" facs="#facs_1_r_1_6">
+								<lb facs="#facs_1_tl_6"/> </head>
+							<milestone type="separator" rend="horizontal" unit="section" rendition="#f"/>
+							<p rendition="#lc" facs="#facs_1_r_3_1">
+								<lb facs="#facs_1_tl_7"/></p></div>
+					</div>
+					<div type="page" n="2">
+						<pb n="2" facs="#facs_2"/>
+						<div>
+							<p rendition="#l" facs="#facs_2_r_1_1">
+								<lb facs="#facs_2_tl_1"/></p></div>
+					</div>
+				</body>
+			</x:context>
+			<x:expect label="S.1 übernommen">
+				<body>
+					<div type="page" n="1">
+						<pb n="1" facs="#facs_1"/>
+						<div>
+							<head rendition="#f" facs="#facs_1_r_1_1">
+								<lb facs="#facs_1_tl_1"/> </head>
+							<milestone type="separator" rend="horizontal" unit="section" rendition="#f"/>
+							<figure type="graphic" facs="#facs_1_Graphic_1505296410150_18"/></div>
+						<div><head rendition="#fc" facs="#facs_1_r_1_2">
+							<lb facs="#facs_1_tl_2"/> </head>
+								<figure type="graphic" facs="#facs_1_r_2"/></div>
+						<div>
+							<head rendition="#?18-82-100--264-1484" facs="#facs_1_r_1_6">
+								<lb facs="#facs_1_tl_6"/> </head>
+							<milestone type="separator" rend="horizontal" unit="section" rendition="#f"/>
+							<p rendition="#lc" facs="#facs_1_r_3_1">
+								<lb facs="#facs_1_tl_7"/> </p></div>
+					</div>
+					<div type="page" n="2">
+						<pb n="2" facs="#facs_2"/>
+						<div>
+							<p rendition="#l" facs="#facs_2_r_1_1">
+								<lb facs="#facs_2_tl_1"/> </p></div>
+					</div>
+				</body>
+			</x:expect>
+		</x:scenario>
+	</x:scenario>
+</x:description>

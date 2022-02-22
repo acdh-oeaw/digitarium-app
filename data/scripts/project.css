@@ -1,0 +1,404 @@
+header h1 {
+  color: black;
+}
+header h2 {
+  padding: 5px;
+}
+
+#content {
+	overflow-x: hidden;
+}
+
+#wdbContent {
+    padding-left: 8px;
+}
+
+/* Im Text Mediävalziffern benutzen */
+body {
+	font-variant-numeric: oldstyle-nums;
+}
+.pagebreak {
+	font-variant-numeric: normal;
+}
+
+/* Alle Titel */
+.title {
+	width: 100%;
+	font-size: 120%;
+}
+.title + .title {
+	margin-top: 0;
+}
+.title.f, .title.c {
+	text-align: center;
+}
+/* ENDE Titel */
+
+/* Überschriften */
+h3 {
+	text-align: center;
+	font-weight: bold;
+	font-style: normal;
+	font-size: 110%;
+	letter-spacing: 1pt;
+	margin-top: 1em;
+	margin-bottom: 0.5em;
+	width: 100%;
+}
+h4 {
+	text-align: center;
+	font-weight: bold;
+	font-style: normal;
+	letter-spacing: 1pt;
+	margin-top: 0.5em;
+	margin-bottom: 0em;
+	width: 100%;
+}
+.inlineHead {
+    font-weight: bold;
+}
+
+/*  Inhalt */
+p.content {
+	margin-top: 0;
+	margin-bottom: 0;
+	width: 100%;
+	text-indent: 2em;
+}
+.pagebreak {
+	display: inline-block;
+	width: 100%;
+	margin-top: 1em;
+}
+
+table.noborder td {
+	vertical-align: top; /* 1732-05-31, S. 7 */
+	padding-top: 0;
+	padding-bottom: 0;
+	float: none;
+	/* padding-left: 1.2em;
+	text-indent: -1em;*/
+	/* schlecht Anzeige bei mehreren Zeilen in Zelle */
+}
+tr {
+	border: none;
+}
+td.r {
+    text-align: right;
+}
+td.c {
+    text-align: center;
+}
+table.noborder td.border-top {
+	border-top: 1px solid black;
+}
+.hanging td:first-child {
+    text-indent: -2em;
+    padding-left: 2em;
+}
+
+/* Layout */
+.page {
+	width: 100%;
+	max-width: 65em;
+}
+
+/* zwei-/dreispaltig */
+.pageHeader, .pageFooter, .divLR, .divLCR {
+	width: 100%;
+	padding: 0;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.divLR .divF, .divLCR .divF, .triF {
+	flex-basis: 100%;
+}
+.divLR div {
+	flex-basis: calc(50% - 11.5px);
+}
+.divLCR div {
+	flex-basis: calc(33.333% - 11.5px);
+}
+
+.divL {
+	padding-right: 10px;
+}
+.divR {
+	padding-left: 10px;
+}
+.dicC {
+	padding-right: 5px;
+	padding-left: 5pc;
+}
+
+.triL, .triC, .triR {
+    flex: 1 1 auto;
+    flex-basis: calc(33.333% - 11.5px);
+}
+.triC:last-child, .triC:first-child, .triR + .triC, .triC + .triC {
+    width: 100%;
+}
+.triC {
+	text-align: center;
+}
+span.triL, span.triC, span.triR {
+  display: inline-block;
+  width: 100%;
+}
+
+.cb {
+	border-left: 1.5px solid black;
+}
+.rl, .cl {
+	text-align: left;
+}
+.lr, .rr, .fr, .cr {
+	text-align: right;
+	float: right;
+}
+.lc, .rc, .c, .cc {
+	text-align: center;
+}
+.f {
+	width: 100%;
+}
+.fc {
+	display: inline-block;
+	width: 100%;
+	text-align: center;
+}
+.fr {
+	display: inline-block;
+	width: 100%;
+	text-align: right;
+}
+
+.fw {
+	flex-grow: 1;
+	flex-basis: 0;
+	margin-bottom: 0;
+}
+.fw.main {
+	font-weight: bold;
+	font-size: 1.1em;
+}
+
+.head > .fw {
+	font-weight: bold;
+	font-size: 1.2em;
+	padding-bottom: 5pt;
+}
+
+.pagebreak + .fw {
+	margin-top: 0.25em;
+}
+/* ENDE Layout */
+
+.noborder {
+	border: 0;
+	width: 100%;
+}
+
+.pageHeader hr {
+	width: 100%;
+}
+.pageHeader .fw {
+	margin-top: 0;
+}
+.pageFooter .fw {
+	margin-top: 0;
+}
+
+p.content + p.content {
+    text-indent: 2em;
+}
+p.content + p.content.lh {
+    text-indent: -2em;
+}
+.content.c, .content.lc, .content.rc {
+    text-indent: 0;
+    padding-right: 0;
+}
+p + p.content.indent {
+    margin-left: 2em;
+    text-indent: 0;
+}
+p + p.content.noindent {
+    text-indent: 0;
+}
+/* Ende Seitennachbau */
+/* potentielle Probleme mit p.content + p.content aus common.css – Vgl.  */
+p.content.lh, p.content.rh, p.content.ch, p.content.fh {
+    padding-left: 2em !important;
+    text-indent: -2em !important;
+}
+
+p.content + p.lc, p.content + p.rc {
+	text-indent: 0;
+}
+p.content.noindent {
+	text-indent: 0;
+}
+p.content.indent {
+    text-indent: 0;
+    padding-left: 2em;
+}
+
+hr {
+    margin-top: 0.5em;
+	width: 100%;
+}
+hr + h3 {
+    margin-top: 0;
+}
+h4:first-child {
+    margin-top: 0px;
+}
+
+.italic {
+    font-style: italic;
+    padding-right: 0.1em;
+}
+.superscript {
+  vertical-align: super;
+}
+
+/* Fraktur */
+@font-face {
+  font-family: 'UnifrakturMaguntia';
+  font-style: normal;
+  font-weight: 400;
+  src: local('UnifrakturMaguntia'), url(https://fonts.gstatic.com/s/unifrakturmaguntia/v8/7KWy3ymCVR_xfAvvcIXm3wh3zWhftzIdHBsuU0JwdCQ.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+.start img {
+    width: 100%;
+}
+
+/* Listen */
+ul {
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-left: 0;
+}
+ul.bottom {
+    margin-bottom: 1em;
+}
+ul.top {
+    margin-top: 1em;
+}
+/* andere li (z.B. im Annotations-Dialog) dürfen nicht geändert werden */
+main li {
+	list-style: none;
+	text-indent: -2em;
+	margin-left: 2em;
+}
+li.indent {
+    text-indent: 0;
+    margin-left: 2em;
+}
+li.findent {
+    text-indent: 2em;
+    margin-left: 0;
+}
+li.noindent {
+    text-indent: 0;
+    margin-left: 0;
+}
+
+/* Layout-Anpassungen header */
+header {
+  padding: 0 2.5em;
+  border-bottom: 4px solid #88dbdf;
+}
+header img {
+    position: absolute;
+    height: 4.59em;
+}
+header h2 {
+    margin-left: 120px;
+    font-variant-numeric: normal;
+}
+header a {
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+}
+header hr {
+    border: 2px solid #88dbdf
+}
+footer {
+	font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+	font-variant-numeric: normal;
+}
+/* Ende Layoutanpassungen Header */
+
+/* Initialen (vgl. #120) */
+span.initial {
+    display: table-cell;
+    font-size: 5rem;
+    height: 2.5rem;
+    float: left;
+    margin-top: 1.5rem;
+    padding-right: 0.2rem;
+}
+
+/* Gedichte */
+.lg {
+	margin-bottom: 0pt;
+	margin-top: 0pt;
+}
+
+/*  Abbildungen im Seitenkopf */
+div span.image {
+	flex: 0 1 auto;
+}
+
+nav {
+  position: absolute;
+  right: 2.5em;
+  top: 4.3em;
+}
+nav h2 {
+  margin: 0;
+}
+
+/* Hervorheben einer Zeile */
+.highlight {
+    background-color: lightblue;
+    opacity: 0.5;
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    padding: 0 1%;
+  }
+  h1 {
+    font-size: 1.1em;
+  }
+  h2 {
+    font-size: 1.0em;
+  }
+  aside p {
+    font-size: 0.9em;
+  }
+  header span {
+    padding-bottom: 0;
+  }
+  header img {
+    height: 3em;
+    padding-top: 3px;
+  }
+  header span {
+    line-height: 1.2em;
+    font-size: 0.9em;
+  }
+  header h1, header h2 {
+    padding-top: 0.25em;
+    margin: 0 0 0 75px;
+  }
+}
+
+.label {
+  display: block;
+}

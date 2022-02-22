@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description xmlns:x="http://www.jenitennison.com/xslt/xspec"
+	xmlns="http://www.tei-c.org/ns/1.0"
+	stylesheet="tok1.xsl">
+	
+	<x:scenario label="T1: w+unclear zusammenziehen">
+		<x:scenario label="T1.1: 1780-12-06 S. 2">
+			<x:context>
+				<p><w>Emanuel</w> <w>Delitala</w> <w>March</w><unclear><w>is</w></unclear> <lb facs="#facs_2_tl_53"/><w>della</w> <w>Manca</w><pc>,</pc></p>
+				<p><w>dieser</w> <w>Gelege</w><unclear><w>n</w><pc>=</pc></unclear> <lb facs="#facs_2_tl_54"/><w>heit</w> <w>die</w></p>
+				<p><w>dem</w> <w>Kön</w><unclear><w>ig</w></unclear> <lb facs="#facs_2_tl_55"/><w>und</w></p>
+			</x:context>
+			<x:expect label="sauber zusammen">
+				<p><w>Emanuel</w> <w>Delitala</w> <w>March<unclear>is</unclear></w> <lb facs="#facs_2_tl_53"/><w>della</w> <w>Manca</w><pc>,</pc></p>
+				<p><w>dieser</w> <w>Gelege<unclear>n<pc>=</pc></unclear></w> <lb facs="#facs_2_tl_54"/><w>heit</w> <w>die</w></p>
+				<p><w>dem</w> <w>Kön<unclear>ig</unclear></w> <lb facs="#facs_2_tl_55"/><w>und</w></p>
+			</x:expect>
+		</x:scenario>
+		<x:scenario label="T1.2: 1780-12-06 S. 3">
+			<x:context>
+				<p><w>aufgebrachten</w> <lb facs="#facs_3_tl_3"/><unclear><w>en</w></unclear><w>gländischen</w> <w>Brickschiffen</w><pc>,</pc></p>
+				<p><w>glücklich</w> <w>einge</w><pc>=</pc> <lb facs="#facs_3_tl_7"/><unclear><w>lo</w></unclear><w>ffen</w><pc>.</pc></p>
+			</x:context>
+			<x:expect label="sauber zusammen">
+				<p><w>aufgebrachten</w> <lb facs="#facs_3_tl_3"/><w><unclear>en</unclear>gländischen</w> <w>Brickschiffen</w><pc>,</pc></p>
+				<p><w>glücklich</w> <w>einge</w><pc>=</pc> <lb facs="#facs_3_tl_7"/><w><unclear>lo</unclear>ffen</w><pc>.</pc></p>
+			</x:expect>
+		</x:scenario>
+		<x:scenario label="T1.3: 1780-12-06 S. 4">
+			<x:context>
+				<p><w>zurück</w> <w>getre</w><unclear><w>t</w><pc>=</pc></unclear> <lb facs="#facs_4_tl_74"/><w>tenen</w> <w>Generals</w></p>
+			</x:context>
+			<x:expect label=".">
+				<p><w>zurück</w> <w>getre<unclear>t<pc>=</pc></unclear></w> <lb facs="#facs_4_tl_74"/><w>tenen</w> <w>Generals</w></p>
+			</x:expect>
+		</x:scenario>
+		<x:scenario label="T1.4: mehrere w in unclear mit folgendem w">
+			<x:context xml:space="preserve">
+				<p><w>sollen</w> <w>die</w><pc>=</pc> <lb facs="#facs_3_tl_10"/><unclear><w>se</w> <w>z</w></unclear><w>u</w> <w>den</w></p>
+				<p><w>sollen</w> <w>die</w><pc>=</pc> <lb facs="#facs_3_tl_10"/><unclear><w>se</w> <w>zu</w> <w>n</w></unclear><w>u</w> <w>den</w></p>
+			</x:context>
+			<x:expect label="Text in richtiger Reihenfolge" xml:space="preserve">
+				<p><w>sollen</w> <w>die</w><pc>=</pc> <lb facs="#facs_3_tl_10"/><unclear><w>se</w></unclear> <w><unclear>z</unclear>u</w> <w>den</w></p>
+				<p><w>sollen</w> <w>die</w><pc>=</pc> <lb facs="#facs_3_tl_10"/><unclear><w>se</w> <w>zu</w></unclear> <w><unclear>n</unclear>u</w> <w>den</w></p>
+			</x:expect>
+		</x:scenario>
+		<x:scenario label="T1.5: 1732-02-13; Zeilenanfang mit w+unclear+w+pc">
+			<x:context xml:space="preserve">
+				<p><lb facs="#facs_1_tl_53" n="N005"/><w>verf</w><unclear><w>üge</w></unclear><w>t</w><pc>.</pc> <w>Jhre</w> <w>Königl</w><pc>.</pc> <w>Hoheit</w> <w>der</w> <hi rend="fontFamily:Antiqua;"><w>In</w><pc>-</pc><lb facs="#facs_1_tl_54" n="N006"/><w>fant</w> <w>D</w><unclear><w>on</w></unclear> <w>Carlos</w></hi> <w>seynd</w> <w>nunmehro</w> <w>völlig</w> </p>
+			</x:context>
+			<x:expect label="am Anfang ein w mit unclear" xml:space="preserve">
+				<p><lb facs="#facs_1_tl_53" n="N005"/><w>verf<unclear>üge</unclear>t</w><pc>.</pc> <w>Jhre</w> <w>Königl</w><pc>.</pc> <w>Hoheit</w> <w>der</w> <hi rend="fontFamily:Antiqua;"><w>In</w><pc>-</pc><lb facs="#facs_1_tl_54" n="N006"/><w>fant</w> <w>D<unclear>on</unclear></w> <w>Carlos</w></hi> <w>seynd</w> <w>nunmehro</w> <w>völlig</w> </p>
+			</x:expect>
+		</x:scenario>
+		<x:scenario label="T1.6: 1780-12-06, S. 6">
+			<x:context>
+				<p rendition="#?48-52-100--949-1958" facs="#facs_6_r_2_3"> <lb facs="#facs_6_tl_58"/><w>Die</w> <w>von</w> <w>uns</w> <w>den</w> <w>29</w><pc>.</pc> <w>Christm</w><pc>.</pc> <w>176</w><gap/> <lb facs="#facs_6_tl_59"/><w>durch</w> <w>unser</w> <w>ganzes</w> <w>Reich</w> <w>errichtete</w> <w>Ba</w><unclear><w>n</w><pc>=</pc></unclear> <lb facs="#facs_6_tl_60"/><w>ken</w><pc>,</pc> <w>welche</w> <w>zur</w> <w>Einwechselung</w> <w>des</w> <w>durc</w><unclear><w>h</w><pc>=</pc></unclear> <lb facs="#facs_6_tl_61"/><w>gehends</w> <w>cursirenden</w> <w>Papiern</w> <w>bestimm</w><unclear><w>t</w></unclear> <lb facs="#facs_6_tl_62"/><w>waren</w><pc>,</pc> <w>hatten</w> <w>bloß</w> <w>allein</w> <w>den</w> <w>leichter</w><unclear><w>en</w></unclear> <lb facs="#facs_6_tl_63"/><w>Umlauf</w> <w>des</w> <w>Geldes</w> <w>im</w> <w>Jnnern</w> <w>unser</w><unclear><w>es</w></unclear> <lb facs="#facs_6_tl_64"/><w>Reichs</w> <w>zum</w> <w>Zweck</w><pc>.</pc> <w>Jhre</w> <w>wesentliche</w> <w>B</w><unclear><w>e</w><pc>=</pc></unclear> <lb facs="#facs_6_tl_65"/><w>schaffenheit</w> <w>beweiset</w> <w>dennoch</w> <w>klar</w><pc>,</pc> <w>d</w><gap/> <lb facs="#facs_6_tl_66"/><w>sdieselben</w> <w>lediglich</w> <w>nur</w> <w>zur</w> <w>Einwechs</w><unclear><pc>=</pc></unclear> <lb facs="#facs_6_tl_67"/><w>lung</w> <w>der</w> <w>Bankopapiere</w> <w>errichtet</w> <w>worden</w><gap/> <lb facs="#facs_6_tl_68"/><w>als</w> <w>welche</w> <w>in</w> <w>Rußland</w> <w>allein</w><pc>,</pc> <w>wo</w> <w>s</w><gap/> <lb facs="#facs_6_tl_69"/><w>statt</w> <w>baaren</w> <w>Geldes</w> <w>dienen</w> <w>sollen</w><pc>,</pc> <w>ke</w><unclear><w>i</w><pc>=</pc></unclear> <lb facs="#facs_6_tl_70"/><w>nes</w> <w>Wegs</w> <w>aber</w> <w>außer</w> <w>den</w> <w>Gränzen</w> <w>u</w><unclear><w>n</w><pc>=</pc></unclear> <lb facs="#facs_6_tl_71"/><w>seres</w> <w>Reichs</w> <w>einen</w> <w>freyen</w> <w>Kurs</w> <w>habe</w><unclear><w>n</w></unclear> <lb facs="#facs_6_tl_72"/><w>können</w><pc>;</pc> <w>in</w> <w>Folge</w> <w>dessen</w> <w>müssen</w> <w>sie</w> <w>au</w><gap/> <lb facs="#facs_6_tl_73"/><w>nicht</w> <w>anders</w><pc>,</pc> <w>als</w> <w>das</w> <w>würklich</w> <w>rußisch</w><unclear><w>e</w></unclear> <lb facs="#facs_6_tl_74"/><w>Schlaggeld</w> <w>betrachtet</w> <w>werden</w><pc>,</pc> <w>dessen</w> <w>Ein</w><unclear><pc>=</pc></unclear> <lb facs="#facs_6_tl_75"/><w>und</w> <w>Ausfuhre</w> <w>durch</w> <w>verschiedene</w> <w>Gesetz</w><unclear><w>e</w></unclear> <lb facs="#facs_6_tl_76"/><w>verboten</w> <w>ist</w><pc>,</pc> <w>als</w> <w>welchen</w> <w>diese</w><pc>,</pc> <w>solche</w><gap/> <lb facs="#facs_6_tl_77"/><w>Geld</w> <w>vorstellende</w> <w>Papiere</w> <w>gleichfalls</w> <w>un</w><unclear><pc>=</pc></unclear> <lb facs="#facs_6_tl_78"/><w>terworfen</w> <w>sind</w><pc>.</pc> <w>Da</w> <w>wir</w> <w>nun</w> <w>auf</w> <w>solch</w><unclear><w>e</w></unclear> <lb facs="#facs_6_tl_79"/><w>Weise</w> <w>den</w> <w>wahren</w> <w>Zweck</w> <w>dieser</w> <w>Banke</w><unclear><w>n</w></unclear> <lb facs="#facs_6_tl_80"/><w>und</w> <w>Papiere</w> <w>erkläret</w> <w>haben</w><pc>,</pc> <w>und</w> <w>dabe</w><unclear><w>y</w></unclear> <lb facs="#facs_6_tl_81"/><w>vermuthen</w><pc>,</pc> <w>daß</w> <w>ein</w> <w>Theil</w> <w>von</w> <w>letztere</w><unclear><w>n</w></unclear> <lb facs="#facs_6_tl_82"/><w>bey</w> <w>verschiedenen</w> <w>Gelegenheiten</w> <w>aus</w> <w>Un</w><unclear><pc>=</pc></unclear> <lb facs="#facs_6_tl_83"/><w>serm</w> <w>Reich</w> <w>weggebracht</w> <w>worden</w><pc>,</pc> <w>so</w> <w>ha</w><pc>=</pc> <lb facs="#facs_6_tl_84"/><w>ben</w> <w>wir</w> <w>vor</w> <w>gerecht</w> <w>und</w> <w>nöthig</w> <w>befun</w><pc>=</pc> <lb facs="#facs_6_tl_85"/><w>den</w><pc>,</pc> <w>dagegen</w> <w>die</w> <w>erforderliche</w> <w>Vorkeh</w><pc>=</pc> <lb facs="#facs_6_tl_86"/><w>rungen</w> <w>zu</w> <w>treffen</w><pc>,</pc> <w>damit</w> <w>diejenigen</w><pc>,</pc> <lb facs="#facs_6_tl_87"/><w>welche</w> <w>dergleichen</w> <w>Papiere</w> <w>in</w> <w>Händen</w> <lb facs="#facs_6_tl_88"/><w>haben</w><pc>,</pc> <w>und</w> <w>welchen</w> <w>derselben</w> <w>wahre</w> <lb facs="#facs_6_tl_89"/><w>Bestimmung</w> <w>bisher</w> <w>vielleicht</w> <w>unbekannt</w> <lb facs="#facs_6_tl_90"/><w>gewesen</w><pc>,</pc> <w>nicht</w> <w>Gefahr</w> <w>laufen</w> <w>mögen</w><pc>,</pc> <lb facs="#facs_6_tl_91"/><w>des</w> <w>Werths</w> <w>derselben</w> <w>verlustig</w> <w>zu</w> <w>wer</w><pc>=</pc> <lb facs="#facs_6_tl_92"/><w>den</w><pc>.</pc> <w>Zu</w> <w>dem</w> <w>Ende</w> <w>haben</w> <w>wir</w> <w>den</w> <w>10</w><pc>.</pc> <lb facs="#facs_6_tl_93"/><w>den</w> <w>21</w><pc>.</pc> <w>n</w><pc>.</pc> <w>St</w><pc>)</pc> <w>Jenner</w> <w>des</w> <w>heranahen</w><pc>=</pc> <lb facs="#facs_6_tl_94"/><w>den</w> <w>Jahres</w><pc>,</pc> <w>als</w> <w>den</w> <w>letzten</w> <w>Termin</w> <w>an</w><pc>=</pc> <lb facs="#facs_6_tl_95"/><w>zuberaumen</w> <w>allergnädigst</w> <w>geruhet</w><pc>,</pc> <w>und</w> <lb facs="#facs_6_tl_96"/><w>erlauben</w> <w>hiermit</w><pc>,</pc> <w>daß</w> <w>alle</w> <w>solche</w> <w>aus</w><pc>=</pc> <lb facs="#facs_6_tl_97"/><w>wärts</w> <w>befindliche</w> <w>Papiere</w> <w>über</w> <w>Riega</w> <lb facs="#facs_6_tl_98"/><w>nach</w> <w>St</w> <w>Petersburg</w> <w>gerade</w> <w>an</w> <w>die</w> <w>Ba</w><unclear><w>n</w></unclear><pc>=</pc> <lb facs="#facs_6_tl_99"/><w>kodirektion</w> <w>zur</w> <w>Auswechselung</w><pc>,</pc> <w>nebst</w> <lb facs="#facs_6_tl_100"/><w>einer</w> <w>schriftlichen</w> <w>Anweisung</w><pc>,</pc> <w>an</w> <w>wen</w> <lb facs="#facs_6_tl_101"/><w>solche</w> <w>geschehen</w> <w>soll</w><pc>,</pc> <w>können</w> <w>eingesen</w><pc>=</pc> <lb facs="#facs_6_tl_102"/><w>det</w> <w>werden</w><pc>;</pc> <w>anbey</w> <w>wollen</w> <w>wir</w> <w>auch</w><pc>,</pc> </p>
+			</x:context>
+			<x:expect label="Zusammengezogen vor tl_67">
+				<p rendition="#?48-52-100--949-1958" facs="#facs_6_r_2_3"> <lb facs="#facs_6_tl_58"/><w>Die</w> <w>von</w> <w>uns</w> <w>den</w> <w>29</w><pc>.</pc> <w>Christm</w><pc>.</pc> <w>176</w><gap/> <lb facs="#facs_6_tl_59"/><w>durch</w> <w>unser</w> <w>ganzes</w> <w>Reich</w> <w>errichtete</w> <w>Ba<unclear>n<pc>=</pc></unclear></w> <lb facs="#facs_6_tl_60"/><w>ken</w><pc>,</pc> <w>welche</w> <w>zur</w> <w>Einwechselung</w> <w>des</w> <w>durc<unclear>h<pc>=</pc></unclear></w> <lb facs="#facs_6_tl_61"/><w>gehends</w> <w>cursirenden</w> <w>Papiern</w> <w>bestimm<unclear>t</unclear></w> <lb facs="#facs_6_tl_62"/><w>waren</w><pc>,</pc> <w>hatten</w> <w>bloß</w> <w>allein</w> <w>den</w> <w>leichter<unclear>en</unclear></w> <lb facs="#facs_6_tl_63"/><w>Umlauf</w> <w>des</w> <w>Geldes</w> <w>im</w> <w>Jnnern</w> <w>unser<unclear>es</unclear></w> <lb facs="#facs_6_tl_64"/><w>Reichs</w> <w>zum</w> <w>Zweck</w><pc>.</pc> <w>Jhre</w> <w>wesentliche</w> <w>B<unclear>e<pc>=</pc></unclear></w> <lb facs="#facs_6_tl_65"/><w>schaffenheit</w> <w>beweiset</w> <w>dennoch</w> <w>klar</w><pc>,</pc> <w>d</w><gap/> <lb facs="#facs_6_tl_66"/><w>sdieselben</w> <w>lediglich</w> <w>nur</w> <w>zur</w> <w>Einwechs<unclear><pc>=</pc></unclear></w> <lb facs="#facs_6_tl_67"/><w>lung</w> <w>der</w> <w>Bankopapiere</w> <w>errichtet</w> <w>worden</w><gap/> <lb facs="#facs_6_tl_68"/><w>als</w> <w>welche</w> <w>in</w> <w>Rußland</w> <w>allein</w><pc>,</pc> <w>wo</w> <w>s</w><gap/> <lb facs="#facs_6_tl_69"/><w>statt</w> <w>baaren</w> <w>Geldes</w> <w>dienen</w> <w>sollen</w><pc>,</pc> <w>ke<unclear>i<pc>=</pc></unclear></w> <lb facs="#facs_6_tl_70"/><w>nes</w> <w>Wegs</w> <w>aber</w> <w>außer</w> <w>den</w> <w>Gränzen</w> <w>u<unclear>n<pc>=</pc></unclear></w> <lb facs="#facs_6_tl_71"/><w>seres</w> <w>Reichs</w> <w>einen</w> <w>freyen</w> <w>Kurs</w> <w>habe<unclear>n</unclear></w> <lb facs="#facs_6_tl_72"/><w>können</w><pc>;</pc> <w>in</w> <w>Folge</w> <w>dessen</w> <w>müssen</w> <w>sie</w> <w>au</w><gap/> <lb facs="#facs_6_tl_73"/><w>nicht</w> <w>anders</w><pc>,</pc> <w>als</w> <w>das</w> <w>würklich</w> <w>rußisch<unclear>e</unclear></w> <lb facs="#facs_6_tl_74"/><w>Schlaggeld</w> <w>betrachtet</w> <w>werden</w><pc>,</pc> <w>dessen</w> <w>Ein<unclear><pc>=</pc></unclear></w> <lb facs="#facs_6_tl_75"/><w>und</w> <w>Ausfuhre</w> <w>durch</w> <w>verschiedene</w> <w>Gesetz<unclear>e</unclear></w> <lb facs="#facs_6_tl_76"/><w>verboten</w> <w>ist</w><pc>,</pc> <w>als</w> <w>welchen</w> <w>diese</w><pc>,</pc> <w>solche</w><gap/> <lb facs="#facs_6_tl_77"/><w>Geld</w> <w>vorstellende</w> <w>Papiere</w> <w>gleichfalls</w> <w>un<unclear><pc>=</pc></unclear></w> <lb facs="#facs_6_tl_78"/><w>terworfen</w> <w>sind</w><pc>.</pc> <w>Da</w> <w>wir</w> <w>nun</w> <w>auf</w> <w>solch<unclear>e</unclear></w> <lb facs="#facs_6_tl_79"/><w>Weise</w> <w>den</w> <w>wahren</w> <w>Zweck</w> <w>dieser</w> <w>Banke<unclear>n</unclear></w> <lb facs="#facs_6_tl_80"/><w>und</w> <w>Papiere</w> <w>erkläret</w> <w>haben</w><pc>,</pc> <w>und</w> <w>dabe<unclear>y</unclear></w> <lb facs="#facs_6_tl_81"/><w>vermuthen</w><pc>,</pc> <w>daß</w> <w>ein</w> <w>Theil</w> <w>von</w> <w>letztere<unclear>n</unclear></w> <lb facs="#facs_6_tl_82"/><w>bey</w> <w>verschiedenen</w> <w>Gelegenheiten</w> <w>aus</w> <w>Un<unclear><pc>=</pc></unclear></w> <lb facs="#facs_6_tl_83"/><w>serm</w> <w>Reich</w> <w>weggebracht</w> <w>worden</w><pc>,</pc> <w>so</w> <w>ha</w><pc>=</pc> <lb facs="#facs_6_tl_84"/><w>ben</w> <w>wir</w> <w>vor</w> <w>gerecht</w> <w>und</w> <w>nöthig</w> <w>befun</w><pc>=</pc> <lb facs="#facs_6_tl_85"/><w>den</w><pc>,</pc> <w>dagegen</w> <w>die</w> <w>erforderliche</w> <w>Vorkeh</w><pc>=</pc> <lb facs="#facs_6_tl_86"/><w>rungen</w> <w>zu</w> <w>treffen</w><pc>,</pc> <w>damit</w> <w>diejenigen</w><pc>,</pc> <lb facs="#facs_6_tl_87"/><w>welche</w> <w>dergleichen</w> <w>Papiere</w> <w>in</w> <w>Händen</w> <lb facs="#facs_6_tl_88"/><w>haben</w><pc>,</pc> <w>und</w> <w>welchen</w> <w>derselben</w> <w>wahre</w> <lb facs="#facs_6_tl_89"/><w>Bestimmung</w> <w>bisher</w> <w>vielleicht</w> <w>unbekannt</w> <lb facs="#facs_6_tl_90"/><w>gewesen</w><pc>,</pc> <w>nicht</w> <w>Gefahr</w> <w>laufen</w> <w>mögen</w><pc>,</pc> <lb facs="#facs_6_tl_91"/><w>des</w> <w>Werths</w> <w>derselben</w> <w>verlustig</w> <w>zu</w> <w>wer</w><pc>=</pc> <lb facs="#facs_6_tl_92"/><w>den</w><pc>.</pc> <w>Zu</w> <w>dem</w> <w>Ende</w> <w>haben</w> <w>wir</w> <w>den</w> <w>10</w><pc>.</pc> <lb facs="#facs_6_tl_93"/><w>den</w> <w>21</w><pc>.</pc> <w>n</w><pc>.</pc> <w>St</w><pc>)</pc> <w>Jenner</w> <w>des</w> <w>heranahen</w><pc>=</pc> <lb facs="#facs_6_tl_94"/><w>den</w> <w>Jahres</w><pc>,</pc> <w>als</w> <w>den</w> <w>letzten</w> <w>Termin</w> <w>an</w><pc>=</pc> <lb facs="#facs_6_tl_95"/><w>zuberaumen</w> <w>allergnädigst</w> <w>geruhet</w><pc>,</pc> <w>und</w> <lb facs="#facs_6_tl_96"/><w>erlauben</w> <w>hiermit</w><pc>,</pc> <w>daß</w> <w>alle</w> <w>solche</w> <w>aus</w><pc>=</pc> <lb facs="#facs_6_tl_97"/><w>wärts</w> <w>befindliche</w> <w>Papiere</w> <w>über</w> <w>Riega</w> <lb facs="#facs_6_tl_98"/><w>nach</w> <w>St</w> <w>Petersburg</w> <w>gerade</w> <w>an</w> <w>die</w> <w>Ba<unclear>n</unclear></w><pc>=</pc> <lb facs="#facs_6_tl_99"/><w>kodirektion</w> <w>zur</w> <w>Auswechselung</w><pc>,</pc> <w>nebst</w> <lb facs="#facs_6_tl_100"/><w>einer</w> <w>schriftlichen</w> <w>Anweisung</w><pc>,</pc> <w>an</w> <w>wen</w> <lb facs="#facs_6_tl_101"/><w>solche</w> <w>geschehen</w> <w>soll</w><pc>,</pc> <w>können</w> <w>eingesen</w><pc>=</pc> <lb facs="#facs_6_tl_102"/><w>det</w> <w>werden</w><pc>;</pc> <w>anbey</w> <w>wollen</w> <w>wir</w> <w>auch</w><pc>,</pc> </p>
+			</x:expect>
+		</x:scenario>
+		<x:scenario label="T1.7: unclear mit pc">
+			<x:context>
+				<p><w>7</w> <w>Reihensch</w><unclear><w>if</w><pc>=</pc></unclear> <lb facs="#facs_4_line_1503139171867_1081"/><w>fen</w><pc>,</pc> <w>2</w></p>
+			</x:context>
+			<x:expect label="pc im unclear">
+				<p><w>7</w> <w>Reihensch<unclear>if<pc>=</pc></unclear></w> <lb facs="#facs_4_line_1503139171867_1081"/><w>fen</w><pc>,</pc> <w>2</w></p>
+			</x:expect>
+		</x:scenario>
+	</x:scenario>
+	
+	<x:scenario label="T2: zwischen unclear">
+		<!-- Dieser Fall ist nicht korrekt umgesetzt, erhöht aber die Komplexität für nur wenige Fälle -->
+		<x:scenario label="T2.1: 1780-12-06">
+			<x:context xml:space="preserve">
+				<p><w>nach</w> <w>e</w><unclear><w>i</w></unclear><w>ne</w><unclear><w>n</w></unclear> <lb facs="#facs_4_tl_77"/><w>vormals</w></p>
+			</x:context>
+			<x:expect label="Ordnung" xml:space="preserve">
+				<p><w>nach</w> <w>e<unclear>i</unclear>ne<unclear>n</unclear></w> <lb facs="#facs_4_tl_77"/><w>vormals</w></p>
+			</x:expect>
+		</x:scenario>
+	</x:scenario>
+	
+	<x:scenario label="T3: Normalfälle">
+		<x:scenario label="T3.1: mit hi und und">
+			<x:context>
+				<p><w>dessentwegen</w> <w>das</w> <hi style="font-family: Antiqua;"><w>Te</w> <w>De</w></hi><pc>=</pc> <lb facs="#facs_2_tl_55"/><hi style="font-family: Antiqua;"><w>um</w> <w>&amp;</w> <w>c</w><pc>.</pc></hi> <w>feyerlich</w> <w>abgesungen</w><pc>;</pc></p>
+			</x:context>
+			<x:expect label="unverändert">
+				<p><w>dessentwegen</w> <w>das</w> <hi style="font-family: Antiqua;"><w>Te</w> <w>De</w></hi><pc>=</pc> <lb facs="#facs_2_tl_55"/><hi style="font-family: Antiqua;"><w>um</w> <pc>&amp;</pc> <w>c</w><pc>.</pc></hi> <w>feyerlich</w> <w>abgesungen</w><pc>;</pc></p>
+			</x:expect>
+		</x:scenario>
+	</x:scenario>
+	
+	<x:scenario label="T4: Tabellen">
+		<x:scenario label="T4.1: cell/cell">
+			<x:context>
+				<div>
+					<table rendition="#f">
+						<row facs="#facs_20_TextRegion_1517193247192_163">
+							<cell><lb xmlns:local="local" facs="#facs_20_line_1517193622044_185"/><hi style="font-family: Antiqua;"><w>Daphnis</w><pc>,</pc> <w>8</w><pc>.</pc> <w>Leipzig</w> <w>1767</w><pc>.</pc> <cell> <pc>—</pc> </cell> <pc>—</pc> <cell> <w>24</w></cell> <w>24</w></hi> </cell></row>
+					</table>
+				</div>
+			</x:context>
+			<x:expect label="saubere row">
+				<div>
+					<table rendition="#f">
+						<row facs="#facs_20_TextRegion_1517193247192_163">
+							<cell><lb xmlns:local="local" facs="#facs_20_line_1517193622044_185"/><hi style="font-family: Antiqua;"><w>Daphnis</w><pc>,</pc> <w>8</w><pc>.</pc> <w>Leipzig</w> <w>1767</w><pc>.</pc></hi></cell>
+							<cell><hi style="font-family: Antiqua;"><pc>—</pc></hi> </cell>
+							<cell><hi style="font-family: Antiqua;"> <w>24</w></hi></cell>
+						</row>
+					</table>
+				</div>
+			</x:expect>
+		</x:scenario>
+	</x:scenario>
+</x:description>

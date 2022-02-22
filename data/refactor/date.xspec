@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description xmlns:x="http://www.jenitennison.com/xslt/xspec" stylesheet="date.xsl"
+	xmlns="http://www.tei-c.org/ns/1.0">
+	<x:scenario label="T1">
+		<x:scenario label="T1.1">
+			<x:context xml:space="preserve">
+				<TEI xml:id="edoc_wd_1779-05-19">
+					<head xml:id="hl1" rendition="#lr" facs="#facs_1_r_4_1">
+						<lb xml:id="z8" facs="#facs_1_tl_2"/><w xml:id="w38">Paris</w> <w xml:id="w39">den</w> <w xml:id="w40">4</w><pc
+							xml:id="w41">.</pc> <w xml:id="w42">May</w><pc xml:id="w43">.</pc></head>
+				</TEI>
+			</x:context>
+			<x:expect label="1779-05-04" xml:space="preserve">
+				<TEI xml:id="edoc_wd_1779-05-19">
+					<head xml:id="hl1" rendition="#lr" facs="#facs_1_r_4_1">
+						<lb xml:id="z8" facs="#facs_1_tl_2"/><w xml:id="w38">Paris</w> <w xml:id="w39">den</w> <date
+							when="1779-05-04"><w xml:id="w40">4</w><pc xml:id="w41">.</pc> <w xml:id="w42">May</w></date><pc
+							xml:id="w43">.</pc></head>
+				</TEI>
+			</x:expect>
+		</x:scenario>
+		<x:scenario label="T1.2">
+			<x:context xml:space="preserve">
+				<TEI xml:id="edoc_wd_1779-05-19">
+					<p><w xml:id="w125">10</w> <w xml:id="w126">Merzen</w><pc>.</pc></p>
+				</TEI>
+			</x:context>
+			<x:expect label="." xml:space="preserve">
+				<TEI xml:id="edoc_wd_1779-05-19">
+					<p><date when="1779-03-10"><w xml:id="w125">10</w> <w xml:id="w126">Merzen</w></date><pc>.</pc></p>
+				</TEI>
+			</x:expect>
+		</x:scenario>
+	</x:scenario>
+	
+	<x:scenario label="T2: kein Datum">
+		<x:scenario label="T2.1">
+			<x:context>
+				<TEI xml:id="edoc_wd_1779-05-19">
+					<p><w xml:id="w145">91</w> <w xml:id="w146">Mann</w></p>
+				</TEI>
+			</x:context>
+			<x:expect label=".">
+				<TEI xml:id="edoc_wd_1779-05-19">
+					<p><w xml:id="w145">91</w> <w xml:id="w146">Mann</w></p>
+				</TEI>
+			</x:expect>
+		</x:scenario>
+		<x:scenario label="T2.2">
+			<x:context>
+				<w xml:id="w3008">22</w><pc xml:id="w3009">.</pc> <w xml:id="w3010">jüngstsverwichenen</w>
+				<lb xml:id="z452" facs="#facs_6_line_1513676714441_35"/><w xml:id="w3011">Aprils</w>
+			</x:context>
+			<x:expect label=".">
+				<w xml:id="w3008">22</w><pc xml:id="w3009">.</pc> <w xml:id="w3010">jüngstsverwichenen</w> 
+				<lb xml:id="z452" facs="#facs_6_line_1513676714441_35"/><w xml:id="w3011">Aprils</w>
+			</x:expect>
+		</x:scenario>
+		<x:scenario label="T2.3">
+			<x:context xml:space="preserve">
+				<lb xml:id="z2201" facs="#facs_22_tl_91"/><w xml:id="w16336">4</w><pc xml:id="w16337">.</pc> <w xml:id="w16338">1779</w><pc xml:id="w16339">.</pc> <w xml:id="w16340">30</w> <w xml:id="w16341">kr</w><pc xml:id="w16342">.</pc> <w xml:id="w16343">Alle</w> <w xml:id="w16344">18</w> <w xml:id="w16345">Theile</w> <w xml:id="w16346">9</w> <w xml:id="w16347">fl</w><pc xml:id="w16348">.</pc>
+			</x:context>
+			<x:expect label="." xml:space="preserve">
+				<lb xml:id="z2201" facs="#facs_22_tl_91"/><w xml:id="w16336">4</w><pc xml:id="w16337">.</pc> <w xml:id="w16338">1779</w><pc xml:id="w16339">.</pc> <w xml:id="w16340">30</w> <w xml:id="w16341">kr</w><pc xml:id="w16342">.</pc> <w xml:id="w16343">Alle</w> <w xml:id="w16344">18</w> <w xml:id="w16345">Theile</w> <w xml:id="w16346">9</w> <w xml:id="w16347">fl</w><pc xml:id="w16348">.</pc>
+			</x:expect>
+		</x:scenario>
+	</x:scenario>
+</x:description>

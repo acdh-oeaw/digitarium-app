@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description xmlns:x="http://www.jenitennison.com/xslt/xspec"
+	xmlns:wdb="https://github.com/dariok/wdbplus"
+	xmlns="http://www.tei-c.org/ns/1.0"
+	xmlns:tei="http://www.tei-c.org/ns/1.0"
+	stylesheet="tok.xsl">
+	
+	<x:scenario label="T1: hi zusammenziehen">
+		<x:scenario label="T1.1: einfach mehrere hi">
+			<x:context xml:space="preserve">
+				<text>
+					<p>
+						<lb facs="#facs_15_tl_44"/>sprechende: <hi style="font-family: Antiqua;">Ef-</hi>
+						<lb facs="#facs_15_tl_45"/><hi style="font-family: Antiqua;">ficiat te Deus bonum &amp; honorabilem Equi-</hi>
+						<lb facs="#facs_15_tl_46"/><hi style="font-family: Antiqua;">tem in nomine Domini nostri, &amp; S. Geor-</hi>
+						<lb facs="#facs_15_tl_47"/><hi style="font-family: Antiqua;">gii</hi>: GOtt
+					</p>
+				</text>
+			</x:context>
+			<x:expect label="zusammengezogenes hi mit w drin" xml:space="preserve">
+				<text>
+					<p><lb facs="#facs_15_tl_44"/><w>sprechende</w><pc>:</pc> <hi style="font-family: Antiqua;"><w>Ef</w><pc>-</pc
+						><lb facs="#facs_15_tl_45"/><w>ficiat</w> <w>te</w> <w>Deus</w> <w>bonum</w> <w>&amp;</w> <w>honorabilem</w
+						> <w>Equi</w><pc>-</pc><lb facs="#facs_15_tl_46"/><w>tem</w> <w>in</w> <w>nomine</w> <w>Domini</w> <w
+						>nostri</w><pc>,</pc> <w>&amp;</w> <w>S</w><pc>.</pc> <w>Geor</w><pc>-</pc><lb facs="#facs_15_tl_47"/><w
+						>gii</w></hi><pc>:</pc> <w>GOtt</w> </p></text>
+			</x:expect>
+		</x:scenario>
+		<x:scenario label="T1.2: hi, text, mehrere hi">
+			<x:context xml:space="preserve">
+				<text>
+					<p>
+						<lb facs="#facs_15_tl_51"/>gends aus vorbesagtem <hi style="font-family: Antiqua;">Ritual</hi> laut herun=
+						<lb facs="#facs_15_tl_52"/>ter lesende / <hi style="font-family: Antiqua;">Ipse Te hic Ordo in Sodalita-</hi>
+						<lb facs="#facs_15_tl_53"/><hi style="font-family: Antiqua;">tem amicabilem suam recipit, ejusque rei</hi>
+					</p>
+				</text>
+			</x:context>
+			<x:expect label="einzelnes hi bleibt" xml:space="preserve">
+				<text>
+					<p><lb facs="#facs_15_tl_51"/><w>gends</w> <w>aus</w> <w>vorbesagtem</w> <hi style="font-family: Antiqua;"><w>Ritual</w></hi> <w>laut</w> <w>herun</w><pc>=</pc><lb facs="#facs_15_tl_52"/><w>ter</w> <w>lesende</w> <pc>/</pc> <hi style="font-family: Antiqua;"><w>Ipse</w> <w>Te</w> <w>hic</w> <w>Ordo</w> <w>in</w> <w>Sodalita</w><pc>-</pc><lb facs="#facs_15_tl_53"/><w>tem</w> <w>amicabilem</w> <w>suam</w> <w>recipit</w><pc>,</pc> <w>ejusque</w> <w>rei</w></hi></p></text>
+			</x:expect>
+		</x:scenario>
+		<x:scenario label="T1.3: Seite/Spalte beginnt mit hi">
+			<x:context xml:space="preserve">
+				<text>
+					<p rendition="#r" facs="#facs_15_r_2_1">
+						<lb facs="#facs_15_tl_54"/><hi style="font-family: Antiqua;">signum Torquem ego hunc tibi circum-</hi>
+						<lb facs="#facs_15_tl_55"/><hi style="font-family: Antiqua;">do, faxit Deus, ut gestare eum possis, id-</hi>
+						<lb facs="#facs_15_tl_56"/><hi style="font-family: Antiqua;">que ut simul ad Divinam Gloriam, atque</hi>
+						<lb facs="#facs_15_tl_63"/>zu Teutsch:</p>
+				</text>
+			</x:context>
+			<x:expect label="lange hi" xml:space="preserve">
+				<text>
+					<p rendition="#r" facs="#facs_15_r_2_1"> <lb facs="#facs_15_tl_54"/><hi style="font-family: Antiqua;"><w>signum</w> <w>Torquem</w> <w>ego</w> <w>hunc</w> <w>tibi</w> <w>circum</w><pc>-</pc> <lb facs="#facs_15_tl_55"/><w>do</w><pc>,</pc> <w>faxit</w> <w>Deus</w><pc>,</pc> <w>ut</w> <w>gestare</w> <w>eum</w> <w>possis</w><pc>,</pc> <w>id</w><pc>-</pc> <lb facs="#facs_15_tl_56"/><w>que</w> <w>ut</w> <w>simul</w> <w>ad</w> <w>Divinam</w> <w>Gloriam</w><pc>,</pc> <w>atque</w></hi> <lb facs="#facs_15_tl_63"/><w>zu</w> <w>Teutsch</w><pc>:</pc></p></text>
+			</x:expect>
+		</x:scenario>
+		<x:scenario label="T1.4: hinter Umbruch: gemischtes Wort">
+			<x:context xml:space="preserve">
+				<text>
+					<p>
+						<lb facs='#facs_4_tl_61' n='N004'/>Regiments Dragoner / und <hi rend='fontFamily:Antiqua;'>Commen-</hi>
+						<lb facs='#facs_4_tl_62' n='N005'/><hi rend='fontFamily:Antiqua;'>dan</hi>ten zu Jpern / zum
+					</p>
+				</text>
+			</x:context>
+			<x:expect label="„ten“ unmittelbar nach hi" xml:space="preserve">
+				<text> 
+					<p><lb facs='#facs_4_tl_61' n='N004'/><w>Regiments</w> <w>Dragoner</w> <pc>/</pc> <w>und</w> <hi
+					style='font-family: Antiqua;'><w>Commen</w><pc>-</pc><lb facs='#facs_4_tl_62' n='N005'/><w>dan</w></hi><w
+					>ten</w> <w>zu</w> <w>Jpern</w> <pc>/</pc> <w>zum</w>
+				</p></text>
+			</x:expect>
+		</x:scenario>
+		<x:scenario label="T1.4a: hinter Umbruch: gemischtes Wort">
+			<x:context xml:space="preserve">
+				<text>
+					<p>
+						<lb facs='#facs_4_tl_61' n='N004'/>Regiments Dragoner / und <hi rend='fontFamily:Antiqua;'>Commen-</hi>
+						<lb facs='#facs_4_tl_62' n='N005'/><hi rend='fontFamily:Antiqua;'>dan</hi>ten zu <hi rend="fontFamily:Antiqua;">Jpern</hi> / zum
+						<lb />Test
+					</p>
+				</text>
+			</x:context>
+			<x:expect label="„ten“ unmittelbar nach hi" xml:space="preserve">
+				<text> 
+					<p><lb facs='#facs_4_tl_61' n='N004'/><w>Regiments</w> <w>Dragoner</w> <pc>/</pc> <w>und</w> <hi
+					style='font-family: Antiqua;'><w>Commen</w><pc>-</pc><lb facs='#facs_4_tl_62' n='N005'/><w>dan</w></hi><w
+					>ten</w> <w>zu</w> <hi style="font-family: Antiqua;"><w>Jpern</w></hi> <pc>/</pc> <w>zum</w>
+						<lb /><w>Test</w>
+				</p></text>
+			</x:expect>
+		</x:scenario>
+		<x:scenario label="T1.5: nur ein hi, aber mehr Info in @rend">
+			<x:context>
+				<text>
+					<p><lb facs='#facs_10_tl_85' n='N008'/>der neu=erbauten <hi rend='fontFamily:Antiqua; fontSize:0.0; kerning:0;'>St. Joannis Nepomuceni-</hi></p>
+				</text>
+			</x:context>
+			<x:expect label="@style">
+				<text>
+					<p><lb facs='#facs_10_tl_85' n='N008'/><w>der</w> <w>neu</w><pc>=</pc><w>erbauten</w> <hi style='font-family: Antiqua;'><w>St</w><pc>.</pc> <w>Joannis</w> <w>Nepomuceni</w><pc>-</pc></hi></p>
+				</text>
+			</x:expect>
+		</x:scenario>
+		<x:scenario label="T1.6: hi Text hi">
+			<x:context xml:space="preserve">
+				<text>
+					<p>
+						<lb facs="#facs_1_TextRegion_1517092546053_162l18"/>gleitung des Printzens von <hi style="font-family: Antiqua;">Bresil</hi>, und dem
+						<lb facs="#facs_1_TextRegion_1517092546053_162l19"/><hi style="font-family: Antiqua;">Infanten Don Anton, incognito</hi> von <hi style="font-family: Antiqua;">Estre-</hi>
+						<lb facs="#facs_1_TextRegion_1517092546053_162l20"/><hi style="font-family: Antiqua;">mos</hi> ab / und kame gegen Mittag alhier an;
+					</p>
+				</text>
+			</x:context>
+			<x:expect label="hi" xml:space="preserve">
+				<text>
+					<p><lb facs="#facs_1_TextRegion_1517092546053_162l18"/><w>gleitung</w> <w>des</w> <w>Printzens</w> <w>von</w> <hi style="font-family: Antiqua;"><w>Bresil</w></hi><pc>,</pc> <w>und</w> <w>dem</w>
+						<lb facs="#facs_1_TextRegion_1517092546053_162l19"/><hi style="font-family: Antiqua;"><w>Infanten</w> <w>Don</w> <w>Anton</w><pc>,</pc> <w>incognito</w></hi> <w>von</w>
+						<hi style="font-family: Antiqua;"><w>Estre</w><pc>-</pc><lb facs="#facs_1_TextRegion_1517092546053_162l20"/><w>mos</w></hi> <w>ab</w> <pc>/</pc> <w>und</w> <w>kame</w> <w>gegen</w> <w>Mittag</w> <w>alhier</w> <w>an</w><pc>;</pc> </p></text>
+			</x:expect>
+		</x:scenario>
+	</x:scenario>
+	
+	<x:scenario label="supplied mit unclear zusammenziehen">
+		<x:scenario label="unclear in supplied">
+			<x:context>
+				<text>
+					<p rendition="#r" facs="#facs_2_r_2_1">
+						<lb facs="#facs_2_tl_52"/>rer, Don Emanuel Delitala March<supplied reason=""><unclear>is</unclear></supplied>
+						<lb facs="#facs_2_tl_53"/>della Manca, hatte bey dieser Gelege<supplied reason="">n=</supplied></p>
+				</text>
+			</x:context>
+			<x:expect label="keine Doppelung" xml:space="preserve"><text>
+					<p rendition="#r" facs="#facs_2_r_2_1"><lb facs="#facs_2_tl_52"/><w>rer</w><pc>,</pc> <w>Don</w> <w>Emanuel</w> <w>Delitala</w> <w>March</w><unclear><w>is</w></unclear>
+				<lb facs="#facs_2_tl_53"/><w>della</w> <w>Manca</w><pc>,</pc> <w>hatte</w> <w>bey</w> <w>dieser</w> <w>Gelege</w><unclear><w>n</w><pc>=</pc></unclear></p></text></x:expect>
+		</x:scenario>
+		<x:scenario label="supplied vor/hinter unclear">
+			<x:context>
+				<text><p>
+					<lb facs="#facs_5_tl_31"/><supplied reason="">te</supplied><unclear>s</unclear> zu erschwingen, war meine einzige
+					<lb facs="#facs_8_tl_97"/><hi style="font-family: Antiqua;">Ordo Missas celebrandi, &amp; horas can<unclear>0</unclear><supplied reason="">-</supplied></hi></p></text>
+			</x:context>
+			<x:expect label="zusammengezogen" xml:space="preserve"><text>
+					<p><lb facs="#facs_5_tl_31"/><unclear><w>tes</w></unclear> <w>zu</w> <w>erschwingen</w><pc>,</pc> <w>war</w> <w>meine</w> <w>einzige</w>
+					<lb facs="#facs_8_tl_97"/><hi style="font-family: Antiqua;"><w>Ordo</w> <w>Missas</w> <w>celebrandi</w><pc>,</pc> <w>&amp;</w> <w>horas</w> <w>can</w><unclear><w>0</w><pc>-</pc></unclear></hi></p></text></x:expect>
+		</x:scenario>
+		<x:scenario label="mehrere Wörter im unclear">
+			<x:context>
+				<text>
+					<p>
+						gr Arm<supplied reason="">en H.</supplied>
+					</p>
+				</text>
+			</x:context>
+			<x:expect label="2w"><text>
+				<p><w>gr</w> <w>Arm</w><unclear><w>en</w> <w>H</w><pc>.</pc></unclear></p>
+			</text>
+			</x:expect>
+		</x:scenario>
+	</x:scenario>
+	
+	<x:scenario label="T3: hi mit anderem">
+		<x:scenario label="T3.1">
+			<x:context xml:space="preserve">
+				<text>
+					<p>
+						<lb facs="#facs_1_tl_23"/>und Herr Baron von Limbach / Jhre <hi style="font-family: Antiqua;">Legitimationes</hi> durch dero Secretarien
+						<lb facs="#facs_1_tl_24"/>bey dem Chur=Mayntzischen <hi style="font-family: Antiqua;">Directorio</hi> <hi style="font-family: Antiqua;">insin</hi>uiren: dieses aber denenselben
+						<lb facs="#facs_1_tl_25"/>darauff zu Rath ansagen lassen; zu welchem auch gedachte Herren Gesandte
+					</p>
+				</text>
+			</x:context>
+			<x:expect label="." xml:space="preserve">
+				<text> 
+					<p><lb facs="#facs_1_tl_23"/><w>und</w> <w>Herr</w> <w>Baron</w> <w>von</w> <w>Limbach</w> <pc>/</pc> <w
+						>Jhre</w> <hi style="font-family: Antiqua;"><w>Legitimationes</w></hi> <w>durch</w> <w>dero</w> <w
+						>Secretarien</w> <lb facs="#facs_1_tl_24"/><w>bey</w> <w>dem</w> <w>Chur</w><pc>=</pc><w>Mayntzischen</w
+						> <hi style="font-family: Antiqua;"><w>Directorio</w></hi> <hi style="font-family: Antiqua;"><w>insin</w
+							></hi><w>uiren</w><pc>:</pc> <w>dieses</w> <w>aber</w> <w>denenselben</w> <lb facs="#facs_1_tl_25"/><w
+						>darauff</w> <w>zu</w> <w>Rath</w> <w>ansagen</w> <w>lassen</w><pc>;</pc> <w>zu</w> <w>welchem</w> <w
+						>auch</w> <w>gedachte</w> <w>Herren</w> <w>Gesandte</w></p> </text>
+			</x:expect>
+		</x:scenario>
+	</x:scenario>
+	
+	<x:scenario label="T4: Textersetzungen">
+		<x:scenario label="T4.1">
+			<x:context xml:space="preserve">
+				<TEI><text><body>
+				<p facs='#facs_10_TextRegion_1515002805965_8'>
+					<lb facs='#facs_10_tl_25' n='N001'/>Jn den Predigten heißt es unter andern:
+					<lb facs='#facs_10_tl_26' n='N002'/>„Wer ist aber unter uns, der nicht wisse,
+					<lb facs='#facs_10_tl_27' n='N003'/>„was uns allesamt für ein Schröcken, Angst
+					<lb facs='#facs_10_tl_28' n='N004'/>„und Noth ankommen, wie unser Gott mit
+					<lb facs='#facs_10_tl_31' n='N007'/> „und Straffen über uns verhänget, der=
+					<lb facs='#facs_10_tl_32' n='N008'/> „gleichen unser keiner in seinem Leben in
+				</p>
+				</body></text></TEI>
+			</x:context>
+			<x:expect label="." xml:space="preserve">
+				<TEI><text><body>
+				<p facs='#facs_10_TextRegion_1515002805965_8'><lb facs='#facs_10_tl_25' n='N001'/><w>Jn</w> <w>den</w> <w>Predigten</w> <w>heißt</w> <w>es</w> <w>unter</w> <w>andern</w><pc>:</pc>
+					<lb facs='#facs_10_tl_26' n='N002'/><pc>„</pc><w>Wer</w> <w>ist</w> <w>aber</w> <w>unter</w> <w>uns</w><pc>,</pc> <w>der</w> <w>nicht</w> <w>wisse</w><pc>,</pc>
+					<lb facs='#facs_10_tl_27' n='N003'/><pc>„</pc><w>was</w> <w>uns</w> <w>allesamt</w> <w>für</w> <w>ein</w> <w>Schröcken</w><pc>,</pc> <w>Angst</w>
+					<lb facs='#facs_10_tl_28' n='N004'/><pc>„</pc><w>und</w> <w>Noth</w> <w>ankommen</w><pc>,</pc> <w>wie</w> <w>unser</w> <w>Gott</w> <w>mit</w>
+					<lb facs='#facs_10_tl_31' n='N007'/> <pc>„</pc><w>und</w> <w>Straffen</w> <w>über</w> <w>uns</w> <w>verhänget</w><pc>,</pc> <w>der</w><pc>=</pc>
+					<lb facs='#facs_10_tl_32' n='N008'/> <pc>„</pc><w>gleichen</w> <w>unser</w> <w>keiner</w> <w>in</w> <w>seinem</w> <w>Leben</w> <w>in</w>
+				</p>
+				</body></text></TEI>
+			</x:expect>
+		</x:scenario>
+	</x:scenario>
+</x:description>

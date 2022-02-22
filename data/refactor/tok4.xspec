@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description xmlns:x="http://www.jenitennison.com/xslt/xspec"
+	xmlns="http://www.tei-c.org/ns/1.0"
+	stylesheet="tok4.xsl">
+	<x:scenario label="T1">
+		<x:scenario label="T1.1: imprimatur">
+			<x:context>
+				<front>
+					<titlePage>
+						<pb n="1" facs="#facs_1"/>
+						<docTitle>
+							<titlePart type="num" facs="#facs_1_r_1_1" rendition="#l">
+								<lb facs="#facs_1_tl_1"/><w xml:id="w1">Num</w> <w xml:id="w2">88</w><pc xml:id="w3">.</pc> </titlePart></docTitle>
+						<docTitle>
+							<titlePart facs="#facs_1_TextRegion_1517384303969_8" rendition="#fc">
+								<lb facs="#facs_1_line_1517384303997_10"/><w xml:id="w4">Samstag</w> <w xml:id="w5">den</w> <w xml:id="w6">2</w><pc xml:id="w7">.</pc> <w xml:id="w8">Novembris</w><pc xml:id="w9">.</pc> </titlePart></docTitle>
+						<docTitle>
+							<titlePart facs="#facs_1_TextRegion_1517384303969_7" rendition="#rr">
+								<lb facs="#facs_1_line_1517384303997_9"/><w xml:id="w10">1748</w><pc xml:id="w11">.</pc> </titlePart></docTitle>
+						<docTitle>
+							<titlePart type="main" facs="#facs_1_region_1517384271361_5" rendition="#fc">
+								<lb facs="#facs_1_line_1517384284819_6"/><w xml:id="w12">Wienerisches</w> </titlePart></docTitle>
+						<docTitle>
+							<titlePart facs="#facs_1_r_4_1" rendition="#fc">
+								<lb facs="#facs_1_tl_3"/><hi style="font-family: Antiqua;"><w xml:id="w13">DIARIUM</w><pc xml:id="w14">.</pc></hi> </titlePart></docTitle>
+						<imprimatur facs="#facs_1_r_6_1" rendition="#f">
+								<lb facs="#facs_1_tl_4"/><w xml:id="w15">Mit</w> <w xml:id="w16">Jhrer</w> <w xml:id="w17">Römisch</w><pc xml:id="w18">=</pc><w xml:id="w19">Kaiserl</w><pc xml:id="w20">.</pc><pc xml:id="w21">,</pc> <w xml:id="w22">auch</w> <w xml:id="w23">zu</w> <w xml:id="w24">Hungarn</w><pc xml:id="w25">,</pc> <w xml:id="w26">und</w> <w xml:id="w27">Böheim</w> <w xml:id="w28">Königl</w><pc xml:id="w29">.</pc> <w xml:id="w30">Maj</w><pc xml:id="w31">.</pc> <w xml:id="w32">Freyheit</w> </imprimatur>
+						<docTitle>
+							<titlePart facs="#facs_1_r_6_2" rendition="#f">
+								<lb facs="#facs_1_tl_5"/><w xml:id="w33">Jn</w> <w xml:id="w34">dem</w> <w xml:id="w35">neuen</w> <w xml:id="w36">Michaeler</w><pc xml:id="w37">=</pc><w xml:id="w38">Haus</w> <pc xml:id="w39">/</pc> <w xml:id="w40">bey</w> <w xml:id="w41">Joh</w><pc xml:id="w42">.</pc> <w xml:id="w43">Peter</w> <w xml:id="w44">v</w><pc xml:id="w45">.</pc> <w xml:id="w46">Ghelen</w><pc xml:id="w47">.</pc> </titlePart></docTitle></titlePage></front>
+			</x:context>
+			<x:expect label="richtige Reihenfolge">
+				<front>
+					<titlePage>
+						<pb n="1" facs="#facs_1"/>
+						<docTitle>
+							<titlePart type="num" facs="#facs_1_r_1_1" rendition="#l">
+								<lb facs="#facs_1_tl_1"/><w xml:id="w1">Num</w> <w xml:id="w2">88</w><pc xml:id="w3">.</pc> </titlePart>
+							<titlePart facs="#facs_1_TextRegion_1517384303969_8" rendition="#fc">
+								<lb facs="#facs_1_line_1517384303997_10"/><w xml:id="w4">Samstag</w> <w xml:id="w5">den</w> <w xml:id="w6">2</w><pc xml:id="w7">.</pc> <w xml:id="w8">Novembris</w><pc xml:id="w9">.</pc> </titlePart>
+							<titlePart facs="#facs_1_TextRegion_1517384303969_7" rendition="#rr">
+								<lb facs="#facs_1_line_1517384303997_9"/><w xml:id="w10">1748</w><pc xml:id="w11">.</pc> </titlePart>
+							<titlePart type="main" facs="#facs_1_region_1517384271361_5" rendition="#fc">
+								<lb facs="#facs_1_line_1517384284819_6"/><w xml:id="w12">Wienerisches</w> </titlePart>
+							<titlePart facs="#facs_1_r_4_1" rendition="#fc">
+								<lb facs="#facs_1_tl_3"/><hi style="font-family: Antiqua;"><w xml:id="w13">DIARIUM</w><pc xml:id="w14">.</pc></hi> </titlePart></docTitle>
+						<imprimatur facs="#facs_1_r_6_1" rendition="#f">
+								<lb facs="#facs_1_tl_4"/><w xml:id="w15">Mit</w> <w xml:id="w16">Jhrer</w> <w xml:id="w17">Römisch</w><pc xml:id="w18">=</pc><w xml:id="w19">Kaiserl</w><pc xml:id="w20">.</pc><pc xml:id="w21">,</pc> <w xml:id="w22">auch</w> <w xml:id="w23">zu</w> <w xml:id="w24">Hungarn</w><pc xml:id="w25">,</pc> <w xml:id="w26">und</w> <w xml:id="w27">Böheim</w> <w xml:id="w28">Königl</w><pc xml:id="w29">.</pc> <w xml:id="w30">Maj</w><pc xml:id="w31">.</pc> <w xml:id="w32">Freyheit</w> </imprimatur>
+						<titlePart facs="#facs_1_r_6_2" rendition="#f">
+								<lb facs="#facs_1_tl_5"/><w xml:id="w33">Jn</w> <w xml:id="w34">dem</w> <w xml:id="w35">neuen</w> <w xml:id="w36">Michaeler</w><pc xml:id="w37">=</pc><w xml:id="w38">Haus</w> <pc xml:id="w39">/</pc> <w xml:id="w40">bey</w> <w xml:id="w41">Joh</w><pc xml:id="w42">.</pc> <w xml:id="w43">Peter</w> <w xml:id="w44">v</w><pc xml:id="w45">.</pc> <w xml:id="w46">Ghelen</w><pc xml:id="w47">.</pc> </titlePart>
+					</titlePage>
+				</front>
+			</x:expect>
+		</x:scenario>
+	</x:scenario>
+	
+	<x:scenario label="T2: teiHeader">
+		<x:scenario label="T2.1">
+			<x:context xml:space="preserve">
+				<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="edoc_wd_1777-04-09">
+					<teiHeader />
+					<text>
+						<front>
+							<titlePage>
+								<pb n="1" facs="#facs_1"/>
+								<docTitle>
+									<titlePart facs="#facs_1_region_1527513355012_1" rendition="#fc">
+										<lb facs="#facs_1_line_1527513358899_2"/><antiqua><w xml:id="w1">Nro</w><pc xml:id="w2">.</pc></antiqua> <w xml:id="w3">29</w><pc xml:id="w4">.</pc></titlePart></docTitle>
+								<docTitle><titlePart type="main" facs="#facs_1_r_3_1" rendition="#f">
+										<lb facs="#facs_1_r_3_1l1"/><w xml:id="w5">Wienerisches</w> <w xml:id="w6">Diarium</w><pc xml:id="w7">.</pc></titlePart></docTitle>
+								<docTitle><titlePart facs="#facs_1_r_4_1" rendition="#fc">
+										<lb facs="#facs_1_r_4_1l1"/><w xml:id="w8">Mittwoch</w> <w xml:id="w9">den</w> <w xml:id="w10">9</w><pc xml:id="w11">.</pc> <w xml:id="w12">April</w> <w xml:id="w13">1777</w><pc xml:id="w14">.</pc></titlePart></docTitle>
+								<docTitle><titlePart facs="#facs_1_r_5_1" rendition="#fc">
+										<lb facs="#facs_1_r_5_1l1"/><antiqua><w xml:id="w15">Sit</w> <w xml:id="w16">mihi</w> <w xml:id="w17">fas</w> <w xml:id="w18">audita</w> <w xml:id="w19">loqui</w><pc xml:id="w20">.</pc></antiqua></titlePart></docTitle>
+								<docTitle><titlePart facs="#facs_1_r_6_1" rendition="#rc">
+										<lb facs="#facs_1_r_6_1l1"/><antiqua><w xml:id="w21">Virgil</w><pc xml:id="w22">.</pc></antiqua></titlePart></docTitle>
+								<docTitle><titlePart facs="#facs_1_r_7_1" rendition="#fc">
+										<lb facs="#facs_1_r_7_1l1"/><w xml:id="w23">Verlegt</w> <w xml:id="w24">von</w> <w xml:id="w25">den</w> <w xml:id="w26">von</w> <w xml:id="w27">Ghelenschen</w> <w xml:id="w28">Erben</w> <w xml:id="w29">in</w> <w xml:id="w30">der</w> <w xml:id="w31">Singerstrasse</w> <w xml:id="w32">Nro</w><pc xml:id="w33">.</pc> <w xml:id="w34">931</w><pc xml:id="w35">.</pc></titlePart></docTitle></titlePage></front>
+					</text>
+				</TEI>
+			</x:context>
+			<x:expect label="." xml:space="preserve">
+				<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="edoc_wd_1777-04-09">
+					<teiHeader>
+						<fileDesc>
+							<titleStmt>
+								<title type="main">Wienerisches Diarium</title>
+								<title type="sub">Digitale Edition</title>
+								<title type="num">Nro. 29. Mittwoch den 9. April 1777.</title>
+								<editor>Resch, Claudia</editor>
+								<editor>Kampkaspar, Dario</editor>
+								<funder>Austrian Academy of Sciences, go!digital 2.0</funder>
+							</titleStmt>
+							<publicationStmt>
+								<publisher>Austrian Centre for Digital Humanities, Austrian Academy of Sciences</publisher>
+								<pubPlace>Vienna, Austria</pubPlace>
+								<availability>
+									<licence>CC-By-SA 4.0 – https://creativecommons.org/licenses/by-sa/4.0/</licence>
+								</availability>
+							</publicationStmt>
+							<sourceDesc>
+								<biblStruct>
+									<monogr>
+										<idno />
+										<title>
+											<date type="published"
+												when="1777-04-09" />
+											<date type="run"
+												notBefore=""
+												notAfter="" />
+										</title>
+										<imprint>
+											<publisher>Johann Peter van Ghelen</publisher>
+										</imprint>
+									</monogr>
+									<series>
+										<title>Wiennerisches Diarium –
+								<date when="1777">Jahrgang 1777</date>
+										</title>
+									</series>
+									<series>
+										<title>Wiener Zeitung</title>
+									</series>
+								</biblStruct>
+								<list>
+									<item />
+								</list>
+							</sourceDesc>
+						</fileDesc>
+						<encodingDesc>...</encodingDesc>
+						<profileDesc>...</profileDesc>
+					</teiHeader>
+					<text>
+						<front>
+							<titlePage>
+								<pb n="1" facs="#facs_1"/>
+								<docTitle>
+									<titlePart facs="#facs_1_region_1527513355012_1" rendition="#fc">
+										<lb facs="#facs_1_line_1527513358899_2"/><antiqua><w xml:id="w1">Nro</w><pc xml:id="w2">.</pc></antiqua> <w xml:id="w3">29</w><pc xml:id="w4">.</pc></titlePart>
+									<titlePart type="main" facs="#facs_1_r_3_1" rendition="#f">
+										<lb facs="#facs_1_r_3_1l1"/><w xml:id="w5">Wienerisches</w> <w xml:id="w6">Diarium</w><pc xml:id="w7">.</pc></titlePart>
+									<titlePart facs="#facs_1_r_4_1" rendition="#fc">
+										<lb facs="#facs_1_r_4_1l1"/><w xml:id="w8">Mittwoch</w> <w xml:id="w9">den</w> <w xml:id="w10">9</w><pc xml:id="w11">.</pc> <w xml:id="w12">April</w> <w xml:id="w13">1777</w><pc xml:id="w14">.</pc></titlePart>
+									<titlePart facs="#facs_1_r_5_1" rendition="#fc">
+										<lb facs="#facs_1_r_5_1l1"/><antiqua><w xml:id="w15">Sit</w> <w xml:id="w16">mihi</w> <w xml:id="w17">fas</w> <w xml:id="w18">audita</w> <w xml:id="w19">loqui</w><pc xml:id="w20">.</pc></antiqua></titlePart>
+									<titlePart facs="#facs_1_r_6_1" rendition="#rc">
+										<lb facs="#facs_1_r_6_1l1"/><antiqua><w xml:id="w21">Virgil</w><pc xml:id="w22">.</pc></antiqua></titlePart>
+									<titlePart facs="#facs_1_r_7_1" rendition="#fc">
+										<lb facs="#facs_1_r_7_1l1"/><w xml:id="w23">Verlegt</w> <w xml:id="w24">von</w> <w xml:id="w25">den</w> <w xml:id="w26">von</w> <w xml:id="w27">Ghelenschen</w> <w xml:id="w28">Erben</w> <w xml:id="w29">in</w> <w xml:id="w30">der</w> <w xml:id="w31">Singerstrasse</w> <w xml:id="w32">Nro</w><pc xml:id="w33">.</pc> <w xml:id="w34">931</w><pc xml:id="w35">.</pc></titlePart>
+								</docTitle>
+							</titlePage>
+						</front>
+					</text>
+				</TEI>
+			</x:expect>
+		</x:scenario>
+		<x:scenario label="T2.2: richtige Nummern übernehmen">
+			<x:context xml:space="preserve">
+				<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="edoc_wd_1756-06-16">
+					<teiHeader>
+						<fileDesc>
+							<titleStmt>
+								<title type="main">wd17560616</title></titleStmt>
+						</fileDesc>
+					</teiHeader>
+					<text><front><titlePage><pb n="1" facs="#facs_1"/><docTitle><titlePart type="num" facs="#facs_1_TextRegion_1538404300248_1" rendition="#f">
+						<lb facs="#facs_1_line_1538404305248_2"/><hi style="font-family: Antiqua;"><w xml:id="w1">Num</w><pc xml:id="w2">.</pc></hi> <w xml:id="w3">48</w><pc xml:id="w4">.</pc> <w xml:id="w5">Mittwoch</w> <w xml:id="w6">den</w> <w xml:id="w7">16</w><pc xml:id="w8">.</pc> <hi style="font-family: Antiqua;"><w xml:id="w9">Junii</w><pc xml:id="w10">.</pc></hi> <w xml:id="w11">1756</w><pc xml:id="w12">.</pc></titlePart></docTitle><docTitle><titlePart type="main" facs="#facs_1_region_1531992092547_4" rendition="#fc">
+							<lb facs="#facs_1_line_1531992183957_8"/><w xml:id="w13">Wienerisches</w> 
+							<lb facs="#facs_1_line_1531992188830_9"/><w xml:id="w14">DIARIUM</w><pc xml:id="w15">.</pc></titlePart></docTitle><docTitle><titlePart facs="#facs_1_r_2_1" rendition="#f">
+								<lb facs="#facs_1_r_2_1l1"/><w xml:id="w16">Gedruckt</w> <w xml:id="w17">in</w> <w xml:id="w18">der</w> <w xml:id="w19">Kaiserl</w><pc xml:id="w20">.</pc> <w xml:id="w21">Königl</w><pc xml:id="w22">.</pc> <w xml:id="w23"><hi style="font-family: Antiqua;">privilegi</hi>rten</w> <w xml:id="w24">Zeitungs</w><pc xml:id="w25">=</pc> <w xml:id="w26">buch<pc xml:id="w27">=</pc><lb facs="#facs_1_r_2_1l2"/>druckerey</w> <w xml:id="w28">im</w> <w xml:id="w29">neuen</w> <w xml:id="w30">Michaeler</w><pc xml:id="w31">=</pc><w xml:id="w32">haus</w> <w xml:id="w33">mit</w> <w xml:id="w34">von</w> <w xml:id="w35">Ghelischen</w> <w xml:id="w36">Schriften</w><pc xml:id="w37">.</pc></titlePart></docTitle></titlePage></front><body><div type="page" n="1"><fw facs="#facs_1_Separator_1531992204403_10" rendition="#f"><milestone type="separator" rend="horizontal" unit="section" rendition="#f"/></fw><div><head rendition="#lc" facs="#facs_1_r_4_1">
+									<lb facs="#facs_1_r_4_1l1"/><w xml:id="w38">Aus</w> <w xml:id="w39">Spanien</w><pc xml:id="w40">.</pc></head></div><div><head rendition="#lc" facs="#facs_1_r_5_1">
+										<lb facs="#facs_1_r_5_1l1"/><w xml:id="w41">Mallaga</w> <w xml:id="w42">11</w> <w xml:id="w43">May</w><pc xml:id="w44">.</pc></head>
+										<p rendition="#l" facs="#facs_1_r_6_1">
+											<lb facs="#facs_1_r_6_1l1"/><w xml:id="w45">Nachdeme</w> <w xml:id="w46">der</w> <w xml:id="w47">Admiral</w> <w xml:id="w48">Byng</w> <w xml:id="w49">zu</w> <w xml:id="w50">Gibral<pc xml:id="w51">=</pc><lb facs="#facs_1_r_6_1l2"/>tar</w> <w xml:id="w52">mit</w> <w xml:id="w53">den</w> <w xml:id="w54">Kriegs</w><pc xml:id="w55">=</pc><w xml:id="w56">schiffen</w> <w xml:id="w57">verstär<pc xml:id="w58">=</pc><lb facs="#facs_1_r_6_1l3"/>ket</w> <w xml:id="w59">worden</w><pc xml:id="w60">,</pc> <w xml:id="w61">welche</w> <w xml:id="w62">der</w> <w xml:id="w63">Chef</w> <w xml:id="w64">d'Es</w> 
+											<lb facs="#facs_1_r_6_1l4"/><w xml:id="w65">cadre</w> <w xml:id="w66">Edgecumbe</w> <w xml:id="w67">unter</w> <w xml:id="w68">seinem</w> <w xml:id="w69">Commando</w> 
+											<lb facs="#facs_1_r_6_1l5"/><w xml:id="w70">hat</w><pc xml:id="w71">,</pc> <w xml:id="w72">so</w> <w xml:id="w73">gieng</w> <w xml:id="w74">diese</w> <w xml:id="w75">vereinigte</w> <w xml:id="w76">Escadre</w> <w xml:id="w77">am</w> <w xml:id="w78">9ten</w> 
+											<lb facs="#facs_1_r_6_1l6"/><w xml:id="w79">dieses</w> <w xml:id="w80">hiesigen</w> <w xml:id="w81">Hafen</w> <w xml:id="w82">vorbey</w><pc xml:id="w83">,</pc> <w xml:id="w84">und</w> <w xml:id="w85">selbige</w> 
+											<lb facs="#facs_1_r_6_1l7"/><w xml:id="w86">richtete</w> <w xml:id="w87">ihre</w> <w xml:id="w88">Fahrt</w> <w xml:id="w89">gegen</w> <w xml:id="w90">die</w> <w xml:id="w91">Jnsul</w> <w xml:id="w92">Minor<pc xml:id="w93">=</pc><lb facs="#facs_1_r_6_1l8"/>ca</w><pc xml:id="w94">.</pc> <w xml:id="w95">Er</w> <w xml:id="w96">hat</w> <w xml:id="w97">den</w> <w xml:id="w98">Admiral</w> <w xml:id="w99">West</w> <w xml:id="w100">bey</w> <w xml:id="w101">sich</w><pc xml:id="w102">,</pc> <w xml:id="w103">und</w> <w xml:id="w104">ihre</w> 
+											<lb facs="#facs_1_r_6_1l9"/><w xml:id="w105">Escadre</w> <w xml:id="w106">bestehet</w> <w xml:id="w107">aus</w> <w xml:id="w108">folgenden</w> <w xml:id="w109">Kriegs</w><pc xml:id="w110">=</pc><w xml:id="w111">schif<pc xml:id="w112">=</pc><lb facs="#facs_1_r_6_1l10"/>fen</w><pc xml:id="w113">:</pc> <w xml:id="w114">Der</w> <w xml:id="w115">Rame<unclear>l</unclear>ies</w> <w xml:id="w116">von</w> <w xml:id="w117">90</w> <w xml:id="w118">Kanonen</w><pc xml:id="w119">,</pc> <w xml:id="w120">vom</w> 
+											<lb facs="#facs_1_r_6_1l11"/><w xml:id="w121">Capitan</w> <w xml:id="w122">Gardner</w> <w xml:id="w123">commandiret</w><pc xml:id="w124">;</pc> <w xml:id="w125">Der</w> <w xml:id="w126">Cul<pc xml:id="w127">=</pc><lb facs="#facs_1_r_6_1l12"/>loden</w> <w xml:id="w128">von</w> <w xml:id="w129">74</w><pc xml:id="w130">.</pc> <w xml:id="w131">Kanonen</w><pc xml:id="w132">,</pc> <w xml:id="w133">unterm</w> <w xml:id="w134">Cap</w><pc xml:id="w135">.</pc> <w xml:id="w136">Ward</w><pc xml:id="w137">;</pc>
+											<lb facs="#facs_1_r_6_1l13"/><w xml:id="w138">Der</w> <w xml:id="w139">Buckingham</w><pc xml:id="w140">,</pc> <w xml:id="w141">Cap</w><pc xml:id="w142">.</pc> <w xml:id="w143">Everit</w><pc xml:id="w144">;</pc> <w xml:id="w145">Die</w> <w xml:id="w146">Re<pc xml:id="w147">=</pc><lb facs="#facs_1_r_6_1l14"/>vange</w><pc xml:id="w148">,</pc> <w xml:id="w149">Cap</w><pc xml:id="w150">.</pc> <w xml:id="w151">Cornwall</w><pc xml:id="w152">;</pc> <w xml:id="w153">Der</w> <w xml:id="w154">Trident</w><pc xml:id="w155">,</pc> <w xml:id="w156">Cap</w><pc xml:id="w157">.</pc>
+											<lb facs="#facs_1_r_6_1l15"/><w xml:id="w158">Durell</w><pc xml:id="w159">;</pc> <w xml:id="w160">Der</w> <w xml:id="w161">Jntrepide</w><pc xml:id="w162">,</pc> <w xml:id="w163">Cap</w><pc xml:id="w164">.</pc> <w xml:id="w165">Young</w><pc xml:id="w166">,</pc> <w xml:id="w167">und</w> 
+											<lb facs="#facs_1_r_6_1l16"/><w xml:id="w168">der</w> <w xml:id="w169">Capitain</w> <w xml:id="w170">Earford</w><pc xml:id="w171">,</pc> <w xml:id="w172">alle</w> <w xml:id="w173">5</w> <w xml:id="w174">von</w> 
+											<lb facs="#facs_1_r_6_1l17"/><w xml:id="w175">70</w><pc xml:id="w176">.</pc> <w xml:id="w177">Kanonen</w><pc xml:id="w178">;</pc> <w xml:id="w179">Der</w> <w xml:id="w180">Lancaster</w><pc xml:id="w181">,</pc> <w xml:id="w182">Cap</w><pc xml:id="w183">.</pc> <w xml:id="w184">Am<pc xml:id="w185">=</pc><lb facs="#facs_1_r_6_1l18"/>hurst</w><pc xml:id="w186">;</pc> <w xml:id="w187">Der</w> <w xml:id="w188">K<unclear>u</unclear>igsion</w><pc xml:id="w189">,</pc> <w xml:id="w190">Cap</w><pc xml:id="w191">.</pc> <w xml:id="w192">Parry</w><pc xml:id="w193">,</pc> <w xml:id="w194">und</w> <w xml:id="w195">die</w> 
+											<lb facs="#facs_1_r_6_1l19"/><w xml:id="w196">Defiance</w><pc xml:id="w197">,</pc> <w xml:id="w198">Cap</w><pc xml:id="w199">.</pc> <w xml:id="w200">Andrews</w><pc xml:id="w201">,</pc> <w xml:id="w202">jedes</w> <w xml:id="w203">von</w> <w xml:id="w204">60</w><pc xml:id="w205">.</pc> <w xml:id="w206">Ka<pc xml:id="w207">=</pc><lb facs="#facs_1_r_6_1l20"/>nonen</w><pc xml:id="w208">.</pc> <w xml:id="w209">Die</w> <w xml:id="w210">Schiffe</w> <w xml:id="w211">unterm</w> <w xml:id="w212">Commando</w> <w xml:id="w213">des</w> 
+											<lb facs="#facs_1_r_6_1l21"/><w xml:id="w214">Herrn</w> <w xml:id="w215">Edgecumbe</w> <w xml:id="w216">sind</w><pc xml:id="w217">:</pc> <w xml:id="w218">Der</w> <w xml:id="w219">Deptfort</w> <w xml:id="w220">und</w> 
+											<lb facs="#facs_1_r_6_1l22"/><w xml:id="w221">die</w> <w xml:id="w222">Prinzeßin</w> <w xml:id="w223">Louise</w><pc xml:id="w224">,</pc> <w xml:id="w225">von</w> <w xml:id="w226">60</w><pc xml:id="w227">.</pc> <w xml:id="w228">Kanonen</w><pc xml:id="w229">;</pc> <w xml:id="w230">Der</w> 
+											<lb facs="#facs_1_r_6_1l23"/><w xml:id="w231">Chesterfeld</w><pc xml:id="w232">,</pc> <w xml:id="w233">von</w> <w xml:id="w234">50</w><pc xml:id="w235">.</pc> <w xml:id="w236">und</w> <w xml:id="w237">der</w> <w xml:id="w238">Phenix</w> <w xml:id="w239">von</w> <w xml:id="w240">24</w><pc xml:id="w241">.</pc>
+											<lb facs="#facs_1_r_6_1l24"/><w xml:id="w242">Kanonen</w> <w xml:id="w243">ausser</w> <w xml:id="w244">einigen</w> <w xml:id="w245">Fregatten</w><pc xml:id="w246">.</pc> <w xml:id="w247">Die</w> <w xml:id="w248">Eng<pc xml:id="w249">=</pc><lb facs="#facs_1_r_6_1l25"/>ländische</w> <w xml:id="w250">Escadre</w> <w xml:id="w251">hatte</w><pc xml:id="w252">,</pc> <w xml:id="w253">als</w> <w xml:id="w254">sie</w> <w xml:id="w255">hiesige</w> <w xml:id="w256">Höhe</w> 
+											<lb facs="#facs_1_r_6_1l26"/><w xml:id="w257">paßirte</w><pc xml:id="w258">,</pc> <w xml:id="w259">den</w> <w xml:id="w260">besten</w> <w xml:id="w261">Wind</w><pc xml:id="w262">;</pc> <w xml:id="w263">wenn</w> <w xml:id="w264">er</w> <w xml:id="w265">so</w> <w xml:id="w266">fort<pc xml:id="w267">=</pc><lb facs="#facs_1_r_6_1l27"/>gedauret</w><pc xml:id="w268">,</pc> <w xml:id="w269">hat</w> <w xml:id="w270">sie</w> <w xml:id="w271">den</w> <w xml:id="w272">16</w><pc xml:id="w273">.</pc> <w xml:id="w274">oder</w> <w xml:id="w275">17</w><pc xml:id="w276">.</pc> <w xml:id="w277">in</w> <w xml:id="w278">der</w> <w xml:id="w279">Ge<pc xml:id="w280">=</pc><lb facs="#facs_1_r_6_1l28"/>gend</w> <w xml:id="w281">von</w> <w xml:id="w282">Minorca</w> <w xml:id="w283">seyn</w> <w xml:id="w284">können</w><pc xml:id="w285">.</pc></p></div><div><head rendition="#lc" facs="#facs_1_r_6_2">
+												<lb facs="#facs_1_r_6_2l1"/><w xml:id="w286">Aus</w> <w xml:id="w287">Groß</w><pc xml:id="w288">=</pc><w xml:id="w289">brittannien</w><pc xml:id="w290">.</pc></head></div>
+							</div>
+						</body>
+					</text>
+				</TEI>
+			</x:context>
+			<x:expect label="." xml:space="preserve">
+				<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="edoc_wd_1756-06-16">
+					<teiHeader><fileDesc><titleStmt><title type="main">Wienerisches DIARIUM</title><title type="sub"
+						>Digitale Edition</title><title type="num">Num. 48. Mittwoch den 16. Junii. 1756. </title><editor>Resch, Claudia</editor><editor>Kampkaspar, Dario</editor><funder>Austrian Academy of Sciences, go!digital 2.0</funder></titleStmt><publicationStmt>...</publicationStmt><sourceDesc>...</sourceDesc></fileDesc><encodingDesc>...</encodingDesc><profileDesc>...</profileDesc></teiHeader>
+					<text>...</text>
+				</TEI>
+			</x:expect>
+		</x:scenario>
+		<x:scenario label="T2.3">
+			<x:context xml:space="preserve">
+				<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="edoc_wd_1771-03-20"><teiHeader><fileDesc><titleStmt><title type="main">wd17710320</title></titleStmt></fileDesc></teiHeader>
+					<text>
+						<front>
+							<titlePage><pb n="1" facs="#facs_1"/><docTitle><titlePart facs="#facs_1_r_1_1" rendition="#fc">
+										<lb facs="#facs_1_r_1_1l1"/><w xml:id="w1">Nro</w><pc xml:id="w2">.</pc> <w xml:id="w3">23</w><pc xml:id="w4">.</pc> <w xml:id="w5">Mittwoch</w> <w xml:id="w6">den</w> <w xml:id="w7">20</w> <w xml:id="w8">März</w> <w xml:id="w9">1771</w><pc xml:id="w10">.</pc></titlePart></docTitle><fw facs="#facs_1_r_2" rendition="#f"><figure type="graphic" facs="#facs_1_r_2"/></fw><fw facs="#facs_1_region_1521896274722_35" rendition="#fc">
+									<p rendition="#fc" facs="#facs_1_region_1521896274722_35">
+										<lb facs="#facs_1_line_1521896279542_36"/><hi style="font-family: Antiqua;"><w xml:id="w11">C</w><pc xml:id="w12">.</pc> <w xml:id="w13">S</w><pc xml:id="w14">.</pc> <w xml:id="w15">P</w><pc xml:id="w16">.</pc>
+										<lb facs="#facs_1_line_1521896283551_38"/><w xml:id="w17">S</w><pc xml:id="w18">.</pc> <w xml:id="w19">C</w><pc xml:id="w20">.</pc>
+										<lb facs="#facs_1_line_1521896281929_37"/><w xml:id="w21">R</w><pc xml:id="w22">.</pc> <w xml:id="w23">A</w><pc xml:id="w24">.</pc> <w xml:id="w25">M</w><pc xml:id="w26">.</pc></hi></p></fw><docTitle><titlePart type="main" facs="#facs_1_r_3_1" rendition="#f">
+										<lb facs="#facs_1_r_3_1l1"/><w xml:id="w27">Wienerisches</w> <w xml:id="w28">Diarium</w><pc xml:id="w29">,</pc></titlePart></docTitle><docTitle><titlePart facs="#facs_1_r_3_2" rendition="#fc">
+										<lb facs="#facs_1_r_3_2l1"/><w xml:id="w30">oder</w></titlePart></docTitle><docTitle><titlePart facs="#facs_1_r_3_3" rendition="#f">
+										<lb facs="#facs_1_r_3_3l1"/><w xml:id="w31">Nachrichten</w> <w xml:id="w32">von</w> <w xml:id="w33">Staats</w><pc xml:id="w34">,</pc> <w xml:id="w35">vermischten</w><pc xml:id="w36">,</pc></titlePart></docTitle><docTitle><titlePart facs="#facs_1_r_3_4" rendition="#fc">
+										<lb facs="#facs_1_r_3_4l1"/><w xml:id="w37">und</w> <w xml:id="w38">gelehrten</w> <w xml:id="w39">Neuigkeiten</w><pc xml:id="w40">.</pc></titlePart></docTitle><docTitle><titlePart facs="#facs_1_r_3_5" rendition="#fc">
+										<lb facs="#facs_1_r_3_5l1"/><w xml:id="w41">Verlegt</w> <w xml:id="w42">bey</w> <w xml:id="w43">den</w> <w xml:id="w44">von</w> <w xml:id="w45">Ghelenschen</w> <w xml:id="w46">Erben</w><pc xml:id="w47">.</pc></titlePart></docTitle></titlePage></front>
+						<body><div type="page" n="1"><div><head rendition="#lc" facs="#facs_1_r_4_1">
+														<lb facs="#facs_1_r_4_1l1"/><w xml:id="w48">Londen</w> <w xml:id="w49">den</w> <w xml:id="w50">26</w><pc xml:id="w51">.</pc> <w xml:id="w52">Hornung</w><pc xml:id="w53">.</pc></head></div></div></body></text></TEI>
+			</x:context>
+			<x:expect label="." xml:space="preserve">
+				<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="edoc_wd_1771-03-20"><teiHeader><fileDesc><titleStmt><title
+					type="main">Wienerisches Diarium</title><title type="sub">...</title><title type="num"
+						>Nro. 23. Mittwoch den 20 März 1771. </title><editor>Resch, Claudia</editor><editor>Kampkaspar, Dario</editor><funder>Austrian Academy of Sciences, go!digital 2.0</funder></titleStmt><publicationStmt>...</publicationStmt><sourceDesc>...</sourceDesc></fileDesc><encodingDesc>...</encodingDesc><profileDesc>...</profileDesc></teiHeader>
+					<text>...</text></TEI>
+			</x:expect>
+		</x:scenario>
+		<x:scenario label="T2.4">
+			<x:context xml:space="preserve">
+				<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="edoc_wd_1731-05-05"><teiHeader><fileDesc><titleStmt><title type="main">wd17310505</title></titleStmt></fileDesc></teiHeader>
+					<text><front><titlePage><pb n="1" facs="#facs_1"/><docTitle><titlePart type="num" facs="#facs_1_TextRegion_1522149924370_1" rendition="#f">
+						<lb facs="#facs_1_line_1522149928281_2"/><hi style="font-family: Antiqua;"><w xml:id="w1">Anno</w> <w xml:id="w2">1731</w><pc xml:id="w3">.</pc> <pc xml:id="w4">(</pc><w xml:id="w5">Num</w><pc xml:id="w6">.</pc> <w xml:id="w7">36</w><pc xml:id="w8">.</pc><pc xml:id="w9">)</pc> <w xml:id="w10">5</w><pc xml:id="w11">.</pc> <w xml:id="w12">Maji</w><pc xml:id="w13">.</pc></hi></titlePart></docTitle><fw facs="#facs_1_r_9" rendition="#f"><milestone type="separator" rend="horizontal" unit="section" rendition="#f"/></fw><fw facs="#facs_1_r_5" rendition="#l"><figure type="graphic" facs="#facs_1_r_5"/></fw><docTitle><titlePart type="main" facs="#facs_1_TextRegion_1521878723456_3" rendition="#fc">
+							<lb facs="#facs_1_r_4_1l1"/><w xml:id="w14">Wienerisches</w> 
+							<lb facs="#facs_1_line_1521879316269_16"/><hi style="font-family: Antiqua;"><w xml:id="w15">DIARIUM</w><pc xml:id="w16">.</pc></hi></titlePart></docTitle></titlePage></front><body><div type="page" n="1"><fw facs="#facs_1_r_6" rendition="#rr"><figure type="graphic" facs="#facs_1_r_6"/></fw><div><head rendition="#fc" facs="#facs_1_r_4_3">
+								<lb facs="#facs_1_r_4_3l1"/><w xml:id="w17">Mit</w> <w xml:id="w18">Jhrer</w> <w xml:id="w19">Röm</w><pc xml:id="w20">.</pc> <w xml:id="w21">Kaiserl</w><pc xml:id="w22">.</pc> <w xml:id="w23">und</w> <w xml:id="w24">Cathol</w><pc xml:id="w25">.</pc> <w xml:id="w26">Majestät</w> <w xml:id="w27">Freyheit</w><pc xml:id="w28">.</pc></head></div><div><head rendition="#f" facs="#facs_1_r_4_4">
+									<lb facs="#facs_1_r_4_4l1"/><w xml:id="w29">Zu</w> <w xml:id="w30">finden</w> <w xml:id="w31">in</w> <w xml:id="w32">der</w> <w xml:id="w33">Kaiserlichen</w> <w xml:id="w34">Hof</w><pc xml:id="w35">=</pc><w xml:id="w36">Buchdruckerey</w> <pc xml:id="w37">/</pc> <w xml:id="w38">gegen</w> <w xml:id="w39">dem</w> <w xml:id="w40">Hof</w><pc xml:id="w41">=</pc>
+									<lb facs="#facs_1_r_4_4l2"/><w xml:id="w42">Ball</w><pc xml:id="w43">=</pc><w xml:id="w44">Haus</w> <w xml:id="w45">über</w> <pc xml:id="w46">/</pc> <w xml:id="w47">bey</w> <w xml:id="w48">Johann</w> <w xml:id="w49">Peter</w> <w xml:id="w50">v</w><pc xml:id="w51">.</pc> <w xml:id="w52">Ghelen</w><pc xml:id="w53">.</pc></head><milestone type="separator" rend="horizontal" unit="section" rendition="#f"/></div><div><head rendition="#lc" facs="#facs_1_r_7_1">
+										<lb facs="#facs_1_r_7_1l1"/><w xml:id="w54">Aus</w> <w xml:id="w55">Portugal</w><pc xml:id="w56">.</pc></head></div><div><head rendition="#lc" facs="#facs_1_r_7_2">
+											<lb facs="#facs_1_r_7_2l1"/><w xml:id="w57">Lisbona</w> <w xml:id="w58">13</w><pc xml:id="w59">.</pc> <w xml:id="w60">Martii</w><pc xml:id="w61">.</pc></head></div></div></body></text></TEI>
+			</x:context>
+			<x:expect label="." xml:space="preserve">
+				<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="edoc_wd_1731-05-05"><teiHeader><fileDesc><titleStmt><title
+					type="main">Wienerisches DIARIUM</title><title type="sub">...</title><title type="num"
+						>Anno 1731. (Num. 36.) 5. Maji. </title><editor>Resch, Claudia</editor><editor>Kampkaspar, Dario</editor><funder>Austrian Academy of Sciences, go!digital 2.0</funder></titleStmt><publicationStmt>...</publicationStmt><sourceDesc>...</sourceDesc></fileDesc><encodingDesc>...</encodingDesc><profileDesc>...</profileDesc></teiHeader>
+					<text>...</text></TEI>
+			</x:expect>
+		</x:scenario>
+		<x:scenario label="T2.5">
+			<x:context xml:space="preserve">
+				<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="edoc_wd_1731-04-11"><teiHeader><fileDesc><titleStmt><title type="main">wd17310411</title></titleStmt></fileDesc></teiHeader>
+					<text><front><titlePage><pb n="1" facs="#facs_1"/><docTitle><titlePart facs="#facs_1_r_1_1" rendition="#l">
+						<lb facs="#facs_1_r_1_1l1"/><hi style="font-family: Antiqua;"><w xml:id="w1">Anno</w></hi> <w xml:id="w2">1731</w><pc xml:id="w3">.</pc></titlePart></docTitle><docTitle><titlePart type="num" facs="#facs_1_r_2_1" rendition="#fc">
+							<lb facs="#facs_1_r_2_1l1"/><pc xml:id="w4">(</pc><hi style="font-family: Antiqua;"><w xml:id="w5">Num</w><pc xml:id="w6">.</pc></hi> <w xml:id="w7">29</w><pc xml:id="w8">.</pc><pc xml:id="w9">)</pc></titlePart></docTitle><docTitle><titlePart facs="#facs_1_r_3_1" rendition="#rr">
+								<lb facs="#facs_1_r_3_1l1"/><w xml:id="w10">11</w><pc xml:id="w11">.</pc> <hi style="font-family: Antiqua;"><w xml:id="w12">Aprilis</w><pc xml:id="w13">.</pc></hi></titlePart></docTitle><fw facs="#facs_1_r_10" rendition="#f"><milestone type="separator" rend="horizontal" unit="section" rendition="#f"/></fw><fw facs="#facs_1_r_4" rendition="#l"><figure type="graphic" facs="#facs_1_r_4"/></fw><docTitle><titlePart type="main" facs="#facs_1_r_5_1" rendition="#fc">
+									<lb facs="#facs_1_line_1521705670285_1"/><w xml:id="w14">Wienerisches</w> 
+									<lb facs="#facs_1_r_5_1l1"/><hi style="font-family: Antiqua;"><w xml:id="w15">DIARIUM</w><pc xml:id="w16">.</pc></hi></titlePart></docTitle></titlePage></front><body><div type="page" n="1"><fw facs="#facs_1_r_6" rendition="#rr"><figure type="graphic" facs="#facs_1_r_6"/></fw><div><head rendition="#f" facs="#facs_1_TextRegion_1521878507862_2">
+										<lb facs="#facs_1_r_5_2l1"/><w xml:id="w20">Mit</w> <w xml:id="w21">Jhrer</w> <w xml:id="w22">Röm</w><pc xml:id="w23">.</pc> <w xml:id="w24">Kaiserl</w><pc xml:id="w25">.</pc> <w xml:id="w26">und</w> <w xml:id="w27">Cathol</w><pc xml:id="w28">.</pc> <w xml:id="w29">Majestät</w> <w xml:id="w30">Freyheit</w><pc xml:id="w31">.</pc></head></div><div><head rendition="#f" facs="#facs_1_TextRegion_1521878507862_1">
+											<lb facs="#facs_1_r_7_1l1"/><w xml:id="w32">Zu</w> <w xml:id="w33">finden</w> <w xml:id="w34">in</w> <w xml:id="w35">der</w> <w xml:id="w36">Kaiserlichen</w> <w xml:id="w37">Hof</w><pc xml:id="w38">=</pc><w xml:id="w39">Buchdruckerey</w> <pc xml:id="w40">/</pc> <w xml:id="w41">gegen</w> <w xml:id="w42">dem</w> <w xml:id="w43">Hof</w><pc xml:id="w44">=</pc>
+											<lb facs="#facs_1_r_7_1l2"/><w xml:id="w45">Ball</w><pc xml:id="w46">=</pc><w xml:id="w47">Haus</w> <w xml:id="w48">über</w> <pc xml:id="w49">/</pc> <w xml:id="w50">bey</w> <w xml:id="w51">Johann</w> <w xml:id="w52">Peter</w> <w xml:id="w53">v</w><pc xml:id="w54">.</pc> <w xml:id="w55">Ghelen</w><pc xml:id="w56">.</pc></head><milestone type="separator" rend="horizontal" unit="section" rendition="#f"/></div><div><head rendition="#lc" facs="#facs_1_r_8_1">
+												<lb facs="#facs_1_r_8_1l1"/><w xml:id="w57">Aus</w> <w xml:id="w58">Türkey</w><pc xml:id="w59">.</pc></head></div><div><head rendition="#l" facs="#facs_1_TextRegion_1521705921819_4">
+													<lb facs="#facs_1_r_8_2l1"/><w xml:id="w60">Constantinopel</w> <w xml:id="w61">15</w><pc xml:id="w62">.</pc> <w xml:id="w63">Januarii</w><pc xml:id="w64">.</pc></head></div></div></body></text>
+				</TEI>
+			</x:context>
+			<x:expect label="." xml:space="preserve">
+				<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="edoc_wd_1731-04-11"><teiHeader><fileDesc><titleStmt><title
+					type="main">Wienerisches DIARIUM</title><title type="sub">...</title><title type="num"
+						>(Num. 29.) Anno 1731. 11. Aprilis.</title><editor>Resch, Claudia</editor><editor>Kampkaspar, Dario</editor><funder>Austrian Academy of Sciences, go!digital 2.0</funder></titleStmt><publicationStmt>...</publicationStmt><sourceDesc>...</sourceDesc></fileDesc><encodingDesc>...</encodingDesc><profileDesc>...</profileDesc></teiHeader>
+					<text>...</text></TEI>
+			</x:expect>
+		</x:scenario>
+		<x:scenario label="1756-06-16">
+			<x:context xml:space="preserve">
+				<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="edoc_wd_1756-06-16"><teiHeader><fileDesc><titleStmt><title type="main">wd17560616</title></titleStmt></fileDesc></teiHeader>
+					<text><front><titlePage><pb n="1" facs="#facs_1"/><docTitle><titlePart type="num" facs="#facs_1_TextRegion_1538404300248_1" rendition="#f">
+						<lb facs="#facs_1_line_1538404305248_2"/><hi style="font-family: Antiqua;"><w xml:id="w1">Num</w><pc xml:id="w2">.</pc></hi> <w xml:id="w3">48</w><pc xml:id="w4">.</pc> <w xml:id="w5">Mittwoch</w> <w xml:id="w6">den</w> <w xml:id="w7">16</w><pc xml:id="w8">.</pc> <hi style="font-family: Antiqua;"><w xml:id="w9">Junii</w><pc xml:id="w10">.</pc></hi> <w xml:id="w11">1756</w><pc xml:id="w12">.</pc></titlePart></docTitle><docTitle><titlePart type="main" facs="#facs_1_region_1531992092547_4" rendition="#fc">
+							<lb facs="#facs_1_line_1531992183957_8"/><w xml:id="w13">Wienerisches</w> 
+							<lb facs="#facs_1_line_1531992188830_9"/><w xml:id="w14">DIARIUM</w><pc xml:id="w15">.</pc></titlePart></docTitle><docTitle><titlePart facs="#facs_1_r_2_1" rendition="#f">
+								<lb facs="#facs_1_r_2_1l1"/><w xml:id="w16">Gedruckt</w> <w xml:id="w17">in</w> <w xml:id="w18">der</w> <w xml:id="w19">Kaiserl</w><pc xml:id="w20">.</pc> <w xml:id="w21">Königl</w><pc xml:id="w22">.</pc> <w xml:id="w23"><hi style="font-family: Antiqua;">privilegi</hi>rten</w> <w xml:id="w24">Zeitungs</w><pc xml:id="w25">=</pc> <w xml:id="w26">buch<pc xml:id="w27">=</pc><lb facs="#facs_1_r_2_1l2"/>druckerey</w> <w xml:id="w28">im</w> <w xml:id="w29">neuen</w> <w xml:id="w30">Michaeler</w><pc xml:id="w31">=</pc><w xml:id="w32">haus</w> <w xml:id="w33">mit</w> <w xml:id="w34">von</w> <w xml:id="w35">Ghelischen</w> <w xml:id="w36">Schriften</w><pc xml:id="w37">.</pc></titlePart></docTitle></titlePage></front><body><div type="page" n="1"><fw facs="#facs_1_Separator_1531992204403_10" rendition="#f"><milestone type="separator" rend="horizontal" unit="section" rendition="#f"/></fw><div><head rendition="#lc" facs="#facs_1_r_4_1">
+									<lb facs="#facs_1_r_4_1l1"/><w xml:id="w38">Aus</w> <w xml:id="w39">Spanien</w><pc xml:id="w40">.</pc></head></div><div><head rendition="#lc" facs="#facs_1_r_5_1">
+										<lb facs="#facs_1_r_5_1l1"/><w xml:id="w41">Mallaga</w> <w xml:id="w42">11</w> <w xml:id="w43">May</w><pc xml:id="w44">.</pc></head>
+									<p rendition="#r" facs="#facs_1_TextRegion_1531992249828_13">
+						<lb facs="#facs_1_r_9_1l1"/><w xml:id="w431">Die</w> <w xml:id="w432">letztere</w> <w xml:id="w433">Französische</w> <w xml:id="w434">Schiffe</w><pc xml:id="w435">,</pc> <w xml:id="w436">welche</w> 
+						<lb facs="#facs_1_r_9_1l2"/><w xml:id="w437">zu</w> <w xml:id="w438">Portsmouth</w><pc xml:id="w439">,</pc> <w xml:id="w440">und</w> <w xml:id="w441">in</w> <w xml:id="w442">den</w> <w xml:id="w443">andern</w> <w xml:id="w444">Königl</w><pc xml:id="w445">.</pc>
+						<lb facs="#facs_1_r_9_1l3"/><w xml:id="w446">Häfen</w> <w xml:id="w447">aufgebracht</w> <w xml:id="w448">worden</w><pc xml:id="w449">,</pc> <w xml:id="w450">seynd</w> <w xml:id="w451">folgende</w><pc xml:id="w452">,</pc>
+						<lb facs="#facs_1_r_9_1l4"/><w xml:id="w453">und</w> <w xml:id="w454">haben</w> <w xml:id="w455">nach</w> <w xml:id="w456">einer</w> <w xml:id="w457">sichern</w> <w xml:id="w458">Liste</w><pc xml:id="w459">,</pc> <w xml:id="w460">welche</w> <w xml:id="w461">an</w> 
+						<lb facs="#facs_1_r_9_1l5"/><w xml:id="w462">der</w> <w xml:id="w463">Börse</w> <w xml:id="w464">bekannt</w> <w xml:id="w465">ist</w><pc xml:id="w466">,</pc> <w xml:id="w467">zugleich</w> <w xml:id="w468">mitbenannte</w> 
+						<lb facs="#facs_1_r_9_1l6"/><w xml:id="w469">Waaren</w> <w xml:id="w470">am</w> <w xml:id="w471">Bord</w> <w xml:id="w472">gehabt</w><pc xml:id="w473">.</pc> <w xml:id="w474">Die</w> <w xml:id="w475">Nannete</w><pc xml:id="w476">:</pc>
+						<lb facs="#facs_1_r_9_1l7"/><w xml:id="w477">193</w><pc xml:id="w478">.</pc> <w xml:id="w479">Oxhöfte</w> <w xml:id="w480">Zucker</w> <w xml:id="w481">und</w> <w xml:id="w482">7</w> <w xml:id="w483">Barriques</w> <w xml:id="w484">dito</w><pc xml:id="w485">;</pc>
+						<lb facs="#facs_1_r_9_1l8"/><w xml:id="w486">3</w> <w xml:id="w487">Orhöfte</w> <w xml:id="w488">Caffee</w><pc xml:id="w489">,</pc> <w xml:id="w490">3</w><pc xml:id="w491">.</pc> <w xml:id="w492">Tierees</w> <w xml:id="w493">dito</w><pc xml:id="w494">,</pc> <w xml:id="w495">44</w><pc xml:id="w496">.</pc>
+						<lb facs="#facs_1_r_9_1l9"/><w xml:id="w497">Barriques</w> <w xml:id="w498">dito</w><pc xml:id="w499">,</pc> <w xml:id="w500">47</w> <w xml:id="w501">Säcke</w> <w xml:id="w502">dito</w><pc xml:id="w503">,</pc> <w xml:id="w504">und</w> <w xml:id="w505">590</w><pc xml:id="w506">.</pc>
+						<lb facs="#facs_1_r_9_1l10"/><w xml:id="w507">Rollen</w> <w xml:id="w508">Toback</w><pc xml:id="w509">.</pc> <w xml:id="w510">Der</w> <w xml:id="w511">Jason</w><pc xml:id="w512">:</pc> <w xml:id="w513">157</w><pc xml:id="w514">.</pc> <w xml:id="w515">Oxhöfte</w> 
+						<lb facs="#facs_1_r_9_2l1"/><w xml:id="w516">weissen</w> <w xml:id="w517">Zucker</w><pc xml:id="w518">,</pc> <w xml:id="w519">und</w> <w xml:id="w520">40</w><pc xml:id="w521">.</pc> <w xml:id="w522">dito</w> <w xml:id="w523">braun</w><pc xml:id="w524">;</pc> <w xml:id="w525">22</w><pc xml:id="w526">.</pc>
+						<lb facs="#facs_1_r_9_2l2"/><w xml:id="w527">Oxhöfte</w> <w xml:id="w528">Caffee</w><pc xml:id="w529">,</pc> <w xml:id="w530">58</w><pc xml:id="w531">.</pc> <w xml:id="w532">dito</w> <w xml:id="w533">halbe</w><pc xml:id="w534">,</pc> <w xml:id="w535">29</w><pc xml:id="w536">.</pc> <w xml:id="w537">Bar<pc xml:id="w538">=</pc><lb facs="#facs_1_r_9_2l3"/>riques</w> <w xml:id="w539">dito</w><pc xml:id="w540">,</pc> <w xml:id="w541">und</w> <w xml:id="w542">5</w><pc xml:id="w543">.</pc> <w xml:id="w544">Säcke</w> <w xml:id="w545">dito</w><pc xml:id="w546">,</pc> <w xml:id="w547">nebst</w> <w xml:id="w548">32</w><pc xml:id="w549">.</pc>
+						<lb facs="#facs_1_r_9_3l1"/><w xml:id="w550">Ballen</w> <w xml:id="w551">Cotton</w><pc xml:id="w552">;</pc> <w xml:id="w553">1</w> <w xml:id="w554">Oxhoft</w> <w xml:id="w555">Jndigo</w><pc xml:id="w556">,</pc> <w xml:id="w557">5</w><pc xml:id="w558">.</pc> <w xml:id="w559">Bar<pc xml:id="w560">=</pc><lb facs="#facs_1_r_9_3l2"/>riques</w> <w xml:id="w561">und</w> <w xml:id="w562">1</w><pc xml:id="w563">.</pc> <w xml:id="w564">Sack</w> <w xml:id="w565">dito</w><pc xml:id="w566">.</pc> <w xml:id="w567">Die</w> <w xml:id="w568">Fleuron</w><pc xml:id="w569">:</pc>
+						<lb facs="#facs_1_r_9_3l3"/><w xml:id="w570">568</w><pc xml:id="w571">.</pc> <w xml:id="w572">Oxhöfte</w> <w xml:id="w573">braunen</w> <w xml:id="w574">Zucker</w> <w xml:id="w575">34</w><pc xml:id="w576">.</pc> <w xml:id="w577">Barri<pc xml:id="w578">=</pc><lb facs="#facs_1_r_9_3l4"/>ques</w> <w xml:id="w579">dito</w><pc xml:id="w580">,</pc> <w xml:id="w581">72</w><pc xml:id="w582">.</pc> <w xml:id="w583">Oxhöfte</w> <w xml:id="w584">weissen</w><pc xml:id="w585">,</pc> <w xml:id="w586">2</w><pc xml:id="w587">.</pc> <w xml:id="w588">halbe</w> 
+						<lb facs="#facs_1_r_9_3l5"/><w xml:id="w589">und</w> <w xml:id="w590">5</w><pc xml:id="w591">.</pc> <w xml:id="w592">Barriques</w> <w xml:id="w593">dito</w><pc xml:id="w594">;</pc> <w xml:id="w595">7</w><pc xml:id="w596">.</pc> <w xml:id="w597">Barriques</w> 
+						<lb facs="#facs_1_r_9_3l6"/><w xml:id="w598">Caffee</w><pc xml:id="w599">:</pc> <w xml:id="w600">20</w><pc xml:id="w601">.</pc> <w xml:id="w602">Ballen</w> <w xml:id="w603">Cotton</w><pc xml:id="w604">,</pc> <w xml:id="w605">und</w> <w xml:id="w606">841</w><pc xml:id="w607">.</pc> <w xml:id="w608">tro<pc xml:id="w609">=</pc><lb facs="#facs_1_r_9_3l7"/>cken</w> <w xml:id="w610">Häute</w> <w xml:id="w611">in</w> <w xml:id="w612">Haaren</w><pc xml:id="w613">.</pc> <w xml:id="w614">Der</w> <w xml:id="w615">Duc</w> <w xml:id="w616">de</w> <w xml:id="w617">Guise</w><pc xml:id="w618">:</pc></p></div></div></body></text></TEI>
+			</x:context>
+			<x:expect label="." xml:space="preserve">
+				<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="edoc_wd_1756-06-16"><teiHeader><fileDesc><titleStmt><title
+					type="main">Wienerisches DIARIUM</title><title type="sub">...</title><title type="num"
+						>Num. 48. Mittwoch den 16. Junii. 1756. </title><editor>Resch, Claudia</editor><editor>Kampkaspar, Dario</editor><funder>Austrian Academy of Sciences, go!digital 2.0</funder></titleStmt><publicationStmt>...</publicationStmt><sourceDesc>...</sourceDesc></fileDesc><encodingDesc>...</encodingDesc><profileDesc>...</profileDesc></teiHeader>
+					<text>...</text></TEI>
+			</x:expect>
+		</x:scenario>
+		<x:scenario label="T6">
+			<x:context xml:space="preserve">
+				<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="edoc_wd_1730-03-22"><teiHeader><fileDesc><titleStmt><title type="main">wd17300322</title></titleStmt></fileDesc></teiHeader>
+					<text><front><titlePage><pb n="1" facs="#facs_1"/><div><head rendition="#f" facs="#facs_1_TextRegion_1525507675478_1">
+						<lb facs="#facs_1_line_1525521454420_10"/><hi style="font-family: Antiqua;"><w xml:id="w1">Anno</w> <w xml:id="w2">1730</w><pc xml:id="w3">.</pc> <pc xml:id="w4">(</pc><w xml:id="w5">Num</w><pc xml:id="w6">.</pc> <w xml:id="w7">23</w><pc xml:id="w8">.</pc><pc xml:id="w9">)</pc> <w xml:id="w10">22</w><pc xml:id="w11">.</pc> <w xml:id="w12">Martius</w></hi></head><milestone type="separator" rend="horizontal" unit="section" rendition="#f"/><figure type="graphic" facs="#facs_1_r_3"/><docTitle><titlePart type="main" facs="#facs_1_TextRegion_1525510896335_2" rendition="#fc">
+							<lb facs="#facs_1_r_4_2l1"/><w xml:id="w13">Wienerisches</w> 
+							<lb facs="#facs_1_r_4_3l1"/><hi style="font-family: Antiqua;"><w xml:id="w14">DIARIUM</w></hi></titlePart></docTitle>
+						<fw facs="#facs_1_r_5" rendition="#rr"><figure type="graphic" facs="#facs_1_r_5"/></fw><figure type="graphic" facs="#facs_1_r_5"/></div></titlePage></front><body><div type="page" n="1"><fw facs="#facs_1_r_5" rendition="#rr"><figure type="graphic" facs="#facs_1_r_5"/></fw><div><head rendition="#fc" facs="#facs_1_r_6_1">
+								<lb facs="#facs_1_r_6_1l1"/><w xml:id="w17">Mit</w> <w xml:id="w18">Jhrer</w> <w xml:id="w19">Römis</w><pc xml:id="w20">.</pc> <w xml:id="w21">Kaiserl</w><pc xml:id="w22">.</pc> <w xml:id="w23">und</w> <w xml:id="w24">Cathol</w><pc xml:id="w25">.</pc> <w xml:id="w26">Majestät</w> <w xml:id="w27">Freyheit</w><pc xml:id="w28">.</pc></head></div><div><head rendition="#f" facs="#facs_1_TextRegion_1525510907272_3">
+									<lb facs="#facs_1_line_1525520989999_8"/><w xml:id="w29">Zu</w> <w xml:id="w30">finden</w> <w xml:id="w31">in</w> <w xml:id="w32">der</w> <w xml:id="w33">Kaiserlichen</w> <w xml:id="w34">Hof</w><pc xml:id="w35">=</pc><w xml:id="w36">Buchdruckerey</w> <w xml:id="w37">dem</w> <w xml:id="w38">Hof</w><pc xml:id="w39">=</pc>
+									<lb facs="#facs_1_r_7_2l1"/><w xml:id="w40">Ball</w><pc xml:id="w41">=</pc><w xml:id="w42">Haus</w> <w xml:id="w43">über</w> <pc xml:id="w44">/</pc> <w xml:id="w45">bey</w> <w xml:id="w46">Johann</w> <w xml:id="w47">Peter</w> <w xml:id="w48">v</w><pc xml:id="w49">.</pc> <w xml:id="w50">Ghelen</w><pc xml:id="w51">.</pc></head><milestone type="separator" rend="horizontal" unit="section" rendition="#f"/></div><div><head rendition="#lc" facs="#facs_1_r_8_1">
+										<lb facs="#facs_1_r_8_1l1"/><w xml:id="w52">Aus</w> <w xml:id="w53">Spanien</w><pc xml:id="w54">.</pc></head></div><div><head rendition="#lc" facs="#facs_1_r_8_2">
+											<lb facs="#facs_1_r_8_2l1"/><w xml:id="w55">Madrid</w> <w xml:id="w56">22</w><pc xml:id="w57">.</pc> <w xml:id="w58">Februarii</w><pc xml:id="w59">.</pc></head></div>
+								<p rendition="#r" facs="#facs_2_r_2_2">
+									<lb facs="#facs_2_r_2_2l1"/><w xml:id="w768">Sie</w> <w xml:id="w769">ward</w> <w xml:id="w770">geboren</w> <w xml:id="w771">den</w> <w xml:id="w772">4ten</w> <hi style="font-family: Antiqua;"><w xml:id="w773">Martii</w></hi> <w xml:id="w774">1676</w><pc xml:id="w775">.</pc>
+									<lb facs="#facs_2_r_2_2l2"/><w xml:id="w776">vermählet</w> <w xml:id="w777">durch</w> <hi style="font-family: Antiqua;"><w xml:id="w778">Procuration</w></hi> <w xml:id="w779">zu</w> <w xml:id="w780">Warschau</w></p></div></body></text>
+				</TEI>
+			</x:context>
+			<x:expect label="." xml:space="preserve">
+				<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="edoc_wd_1730-03-22"><teiHeader><fileDesc><titleStmt><title
+					type="main">Wienerisches DIARIUM</title><title type="sub">...</title><title type="num"
+						>Anno 1730. (Num. 23.) 22. Martius </title><editor>Resch, Claudia</editor><editor>Kampkaspar, Dario</editor><funder>Austrian Academy of Sciences, go!digital 2.0</funder></titleStmt><publicationStmt>...</publicationStmt><sourceDesc>...</sourceDesc></fileDesc><encodingDesc>...</encodingDesc><profileDesc>...</profileDesc></teiHeader>
+					<text>...</text></TEI>
+			</x:expect>
+		</x:scenario>
+	</x:scenario>
+</x:description>

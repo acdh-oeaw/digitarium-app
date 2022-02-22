@@ -1,0 +1,9 @@
+body { font-family:'Calibri', 'Lato', sans-serif; }
+.num { margin:0; width: 400px; padding:12px; display:inline-block; }
+.back { height:80px; border:1px solid; width:400px; }
+.pages { height:40px; background-color:lightseagreen; width: 0px; }
+.dpages { height:40px; background-color:seagreen; }
+.opages { height:40px; background-color:green; }
+.issues { height:40px; background-color:lightgray; width:0px; }
+.dissues { height:40px; background-color:darkgray; }
+.oissues { height:40px; background-color:gray; }

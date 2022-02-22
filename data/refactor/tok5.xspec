@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description xmlns:x="http://www.jenitennison.com/xslt/xspec"
+	xmlns="http://www.tei-c.org/ns/1.0"
+	stylesheet="tok5.xsl">
+	<x:scenario label="Nr, Datum finden">
+		<x:scenario label="1771-03-09">
+			<x:context>
+				<title type="num">Nro. 20. Sonnabend den 9. März 1771. </title>
+			</x:context>
+			<x:expect label="Nr. 20">
+				<title type="num">Nr. 20, 9. März 1771</title>
+			</x:expect>
+		</x:scenario>
+		<x:scenario label="1706-02-02">
+			<x:context>
+				<title type="num">Num. 261. Wienn / vom 30. Jenner biß 2. Februarii / 1706.</title>
+			</x:context>
+			<x:expect label="261">
+				<title type="num">Nr. 261, 30. Jänner–2. Februar 1706</title>
+			</x:expect>
+		</x:scenario>
+		<x:scenario label="1771-03-20">
+			<x:context>
+				<title type="num">Nro. 23. Mittwoch den 20 März 1771. </title>
+			</x:context>
+			<x:expect label="23">
+				<title type="num">Nr. 23, 20. März 1771</title>
+			</x:expect>
+		</x:scenario>
+		<x:scenario label="1721-04-12">
+			<x:context>
+				<title type="num">Num. 1847 Wien / vom 12. bis 15. April / 1721.</title>
+			</x:context>
+			<x:expect label="1847">
+				<title type="num">Nr. 1847, 12.–15. April 1721</title>
+			</x:expect>
+		</x:scenario>
+		<x:scenario label="1731-05-05">
+			<x:context>
+				<title type="num">Anno 1731. (Num. 36.) 5. Maji. </title>
+			</x:context>
+			<x:expect label=".">
+				<title type="num">Nr. 36, 5. Mai 1731</title>
+			</x:expect>
+		</x:scenario>
+		<x:scenario label="1731-04-11">
+			<x:context>
+				<title type="num">(Num. 29.) Anno 1731. 11. Aprilis.</title>
+			</x:context>
+			<x:expect label=".">
+				<title type="num">Nr. 29, 11. April 1731</title>
+			</x:expect>
+		</x:scenario>
+		<x:scenario label="1744-05-02">
+			<x:context>
+				<title type="num">Anno 1744. Num. (36) 2. Maji. </title>
+			</x:context>
+			<x:expect label=".">
+				<title type="num">Nr. 36, 2. Mai 1744</title>
+			</x:expect>
+		</x:scenario>
+	</x:scenario>
+</x:description>
