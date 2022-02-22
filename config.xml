@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="schema/config.xsd" type="application/xml-schema"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="https://github.com/dariok/wdbplus/schema/config.xsd" xmlns="https://github.com/dariok/wdbplus">
+	<!-- General meta data -->
+	<!-- name and short are mandatory -->
+	<meta>
+		<!-- long name -->
+		<name>Wien[n]erisches Diarium digital</name>
+		<!-- short title -->
+		<short>Digitarium</short>
+		<!-- a logo -->
+		<logo>https://www.oeaw.ac.at/fileadmin/_processed_/5/8/csm_acdh_projects_WrDiarium_logo_9f13d4837f.jpg</logo>
+	</meta>
+	
+	<!-- if not a standalone, role contains the role type and the related instance for that role, if applicable -->
+	<!--<role>
+		<type>workbench</type>
+		<peer>http://dev2.hab.de/edoc</peer>
+	</role>-->
+	
+	<!-- may contain a list of parameter / value pairs that can either be read by XSL or from the model in XQuery -->
+	<!--<params>
+		<param name="vd16">http://gateway-bayern.de/VD16+</param>
+		<param name="hab">http://diglib.hab.de</param>
+	</params>-->
+	
+	<!-- if the base address cannot be correctly extracted, a value – full URI to the instance's root, possibly including
+		ports – can be given here. It should _not_ end with a '/' -->
+	<server>https://digitarium-app.acdh.oeaw.ac.at/edoc</server>
+	<rest>https://diarium-exist.acdh-dev.oeaw.ac.at/exist/restxq/edoc</rest>
+</config>
